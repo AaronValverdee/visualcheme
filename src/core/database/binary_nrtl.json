@@ -1,0 +1,2818 @@
+[
+  {
+    "id1": 5,
+    "id2": 1101,
+    "a12_cal_mol": 1440.1498,
+    "a21_cal_mol": 1053.7716,
+    "alpha": 0.4647,
+    "system": "Butane/Methanol p126 1/2c"
+  },
+  {
+    "id1": 7,
+    "id2": 1102,
+    "a12_cal_mol": 1183.3812,
+    "a21_cal_mol": 412.7546,
+    "alpha": 0.2886,
+    "system": "Pentane/Ethanol p376 1/2c"
+  },
+  {
+    "id1": 8,
+    "id2": 1102,
+    "a12_cal_mol": 1610.2811,
+    "a21_cal_mol": 935.1426,
+    "alpha": 0.496,
+    "system": "2-Methylbutane/Ethanol p373 1/2c"
+  },
+  {
+    "id1": 11,
+    "id2": 1102,
+    "a12_cal_mol": 1218.1065,
+    "a21_cal_mol": 575.2985,
+    "alpha": 0.2882,
+    "system": "Hexane/Ethanol p437 1/2c"
+  },
+  {
+    "id1": 11,
+    "id2": 1103,
+    "a12_cal_mol": 1092.147,
+    "a21_cal_mol": 480.674,
+    "alpha": 0.294,
+    "system": "Hexane/1-Propanol p550 1/2c"
+  },
+  {
+    "id1": 137,
+    "id2": 1103,
+    "a12_cal_mol": 1707.7883,
+    "a21_cal_mol": 353.2705,
+    "alpha": 0.5914,
+    "system": "Cyclohexane/1-Propanol p542 1/2c"
+  },
+  {
+    "id1": 138,
+    "id2": 1181,
+    "a12_cal_mol": 2587.873,
+    "a21_cal_mol": -439.4469,
+    "alpha": 0.2836,
+    "system": "MethylCycloHexane/Phenol p482 1/2d"
+  },
+  {
+    "id1": 207,
+    "id2": 1101,
+    "a12_cal_mol": 1333.6,
+    "a21_cal_mol": 556.3608,
+    "alpha": 0.3697,
+    "system": "Isobutylene/Methanol p105 1/2c"
+  },
+  {
+    "id1": 214,
+    "id2": 1101,
+    "a12_cal_mol": 1355.6853,
+    "a21_cal_mol": 660.9164,
+    "alpha": 0.3381,
+    "system": "2-Methyl-2-Butene/Methanol p154 1/2c"
+  },
+  {
+    "id1": 214,
+    "id2": 1102,
+    "a12_cal_mol": 1412.7516,
+    "a21_cal_mol": 674.7726,
+    "alpha": 0.4569,
+    "system": "2-Methyl-2-Butene/Ethanol p365 1/2c"
+  },
+  {
+    "id1": 216,
+    "id2": 1101,
+    "a12_cal_mol": 1222.6032,
+    "a21_cal_mol": 1145.1085,
+    "alpha": 0.4402,
+    "system": "1-Hexene/Methanol p212 1/2c"
+  },
+  {
+    "id1": 216,
+    "id2": 1102,
+    "a12_cal_mol": 1399.1806,
+    "a21_cal_mol": 949.7239,
+    "alpha": 0.5011,
+    "system": "1-Hexene/Ethanol p420 1/2c"
+  },
+  {
+    "id1": 302,
+    "id2": 1101,
+    "a12_cal_mol": 1353.0599,
+    "a21_cal_mol": 610.8292,
+    "alpha": 0.467,
+    "system": "1.3-Butadiene/Methanol p103 1/2c"
+  },
+  {
+    "id1": 305,
+    "id2": 1101,
+    "a12_cal_mol": 1545.3339,
+    "a21_cal_mol": 799.1289,
+    "alpha": 0.4753,
+    "system": "1.3-Pentadiene(CIS)/Methanol p147 1/2c"
+  },
+  {
+    "id1": 306,
+    "id2": 1101,
+    "a12_cal_mol": 1514.2761,
+    "a21_cal_mol": 782.1729,
+    "alpha": 0.4657,
+    "system": "Trans-1.3-Pentadiene/Methanol p148 1/2c"
+  },
+  {
+    "id1": 309,
+    "id2": 1101,
+    "a12_cal_mol": 1445.6425,
+    "a21_cal_mol": 543.527,
+    "alpha": 0.426,
+    "system": "Isoprene/Methanol p145 1/2c"
+  },
+  {
+    "id1": 309,
+    "id2": 1102,
+    "a12_cal_mol": 1402.5377,
+    "a21_cal_mol": 653.4866,
+    "alpha": 0.5056,
+    "system": "Isoprene/Ethanol p358 1/2c"
+  },
+  {
+    "id1": 315,
+    "id2": 1101,
+    "a12_cal_mol": 1541.9324,
+    "a21_cal_mol": 736.0352,
+    "alpha": 0.4515,
+    "system": "Cyclopentadiene/Methanol p144 1/2c"
+  },
+  {
+    "id1": 501,
+    "id2": 1103,
+    "a12_cal_mol": 874.2419,
+    "a21_cal_mol": 285.7774,
+    "alpha": 0.2899,
+    "system": "Benzene/1-Propanol p537 1/2c"
+  },
+  {
+    "id1": 501,
+    "id2": 1521,
+    "a12_cal_mol": -227.3671,
+    "a21_cal_mol": -86.1025,
+    "alpha": 0.3062,
+    "system": "Benzene/Chloroform 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1181,
+    "a12_cal_mol": 373.4202,
+    "a21_cal_mol": 318.1885,
+    "alpha": 0.2986,
+    "system": "Benzene/Phenol p482 1/2d"
+  },
+  {
+    "id1": 501,
+    "id2": 502,
+    "a12_cal_mol": 60.198,
+    "a21_cal_mol": -51.0865,
+    "alpha": 0.3019,
+    "system": "Benzene/Toluene p282 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 507,
+    "a12_cal_mol": -50.2635,
+    "a21_cal_mol": 14.218,
+    "alpha": 0.3056,
+    "system": "Benzene/pXylene p310 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1698,
+    "a12_cal_mol": 893.4167,
+    "a21_cal_mol": -566.9011,
+    "alpha": 0.255,
+    "system": "1 Benzene/Tribromomethane p59 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1760,
+    "a12_cal_mol": 273.5119,
+    "a21_cal_mol": 524.903,
+    "alpha": 0.296,
+    "system": "1 Benzene/Nitromethane p88 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1542,
+    "a12_cal_mol": -94.1122,
+    "a21_cal_mol": 288.6566,
+    "alpha": 0.302,
+    "system": "3 Benzene/Tetrachloroethylene p112 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1541,
+    "a12_cal_mol": 140.5075,
+    "a21_cal_mol": -127.4605,
+    "alpha": 0.306,
+    "system": "4 Benzene/Trichloroethylene p118 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1590,
+    "a12_cal_mol": -225.8274,
+    "a21_cal_mol": 197.746,
+    "alpha": 0.303,
+    "system": "0 Benzene/Pentachloroethane p119 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1529,
+    "a12_cal_mol": -73.7504,
+    "a21_cal_mol": -250.7743,
+    "alpha": 0.305,
+    "system": "5 Benzene/1.1.2.2-tetrachloroethane p120 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1772,
+    "a12_cal_mol": -100.924,
+    "a21_cal_mol": 300.0048,
+    "alpha": 0.304,
+    "system": "6 Benzene/1.2-Dibromoethane p136 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1523,
+    "a12_cal_mol": 58.8289,
+    "a21_cal_mol": -39.5526,
+    "alpha": 0.303,
+    "system": "5 Benzene/1.2-Dichloroethane p158 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 2852,
+    "a12_cal_mol": 1512.9737,
+    "a21_cal_mol": 639.2332,
+    "alpha": 0.523,
+    "system": "1 Benzene/N-Methylformamide p161 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1761,
+    "a12_cal_mol": 527.2886,
+    "a21_cal_mol": -57.1531,
+    "alpha": 0.3,
+    "system": "4 Benzene/Nitroethane p163 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1844,
+    "a12_cal_mol": 810.544,
+    "a21_cal_mol": 408.5646,
+    "alpha": 0.669,
+    "system": "1 Benzene/Dimethylsulfoxide p166 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1741,
+    "a12_cal_mol": 490.0693,
+    "a21_cal_mol": 560.0207,
+    "alpha": 0.295,
+    "system": "7 Benzene/Ethylenediamine p170 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1876,
+    "a12_cal_mol": 736.7867,
+    "a21_cal_mol": -251.4046,
+    "alpha": 0.307,
+    "system": "4 Benzene/N.N-dimethylformamide p184 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1762,
+    "a12_cal_mol": -157.3069,
+    "a21_cal_mol": 595.6615,
+    "alpha": 0.301,
+    "system": "2 Benzene/1-Nitropropane p185 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1763,
+    "a12_cal_mol": 1088.4773,
+    "a21_cal_mol": -446.4137,
+    "alpha": 0.306,
+    "system": "8 Benzene/2-Nitropropane p186 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1821,
+    "a12_cal_mol": -347.2708,
+    "a21_cal_mol": 503.5971,
+    "alpha": 0.304,
+    "system": "5 Benzene/Thiophene p188 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1791,
+    "a12_cal_mol": 541.0855,
+    "a21_cal_mol": -319.8327,
+    "alpha": 0.279,
+    "system": "5 Benzene/Pyridine p221 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1864,
+    "a12_cal_mol": 1085.4557,
+    "a21_cal_mol": -715.7662,
+    "alpha": 0.298,
+    "system": "9 Benzene/Hexafluorobenzene p226 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1574,
+    "a12_cal_mol": 1441.9721,
+    "a21_cal_mol": -865.5699,
+    "alpha": 0.283,
+    "system": "0 Benzene/P-Dichlorobenzene p238 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1680,
+    "a12_cal_mol": 1538.3464,
+    "a21_cal_mol": -819.5924,
+    "alpha": 0.321,
+    "system": "4 Benzene/Bromobenzene p241 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1571,
+    "a12_cal_mol": 700.4097,
+    "a21_cal_mol": -450.6274,
+    "alpha": 0.325,
+    "system": "1 Benzene/Chlorobenzene p251 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1860,
+    "a12_cal_mol": 277.6641,
+    "a21_cal_mol": -292.2391,
+    "alpha": 0.304,
+    "system": "0 Benzene/Fluorobenzene p252 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1886,
+    "a12_cal_mol": 1311.3264,
+    "a21_cal_mol": -523.3212,
+    "alpha": 0.311,
+    "system": "0 Benzene/Nitrobenzene p254 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1792,
+    "a12_cal_mol": 776.8671,
+    "a21_cal_mol": -178.3464,
+    "alpha": 0.299,
+    "system": "0 Benzene/Aniline p266 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1729,
+    "a12_cal_mol": 717.4228,
+    "a21_cal_mol": -684.6315,
+    "alpha": 0.29,
+    "system": "8 Benzene/Cyclohexylamine p274 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1706,
+    "a12_cal_mol": 130.6061,
+    "a21_cal_mol": -27.3294,
+    "alpha": 0.303,
+    "system": "7 Benzene/Triethylamine p277 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1790,
+    "a12_cal_mol": 1390.488,
+    "a21_cal_mol": -636.1853,
+    "alpha": 0.285,
+    "system": "1 Benzene/Benzonitrile p278 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 502,
+    "a12_cal_mol": 111.1157,
+    "a21_cal_mol": -121.2437,
+    "alpha": 0.303,
+    "system": "3 Benzene/Toluene p301 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 2731,
+    "a12_cal_mol": 52.3967,
+    "a21_cal_mol": 94.0417,
+    "alpha": 0.302,
+    "system": "0 Benzene/N-Methylcyclohexylamine p304 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 601,
+    "a12_cal_mol": -643.5999,
+    "a21_cal_mol": 970.4264,
+    "alpha": 0.311,
+    "system": "0 Benzene/Styrene p305 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 504,
+    "a12_cal_mol": -70.8372,
+    "a21_cal_mol": 57.0902,
+    "alpha": 0.303,
+    "system": "4 Benzene/Ethylbenzene p306 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 506,
+    "a12_cal_mol": -454.1872,
+    "a21_cal_mol": 615.2806,
+    "alpha": 0.287,
+    "system": "8 Benzene/M-Xylene p307 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 507,
+    "a12_cal_mol": -50.2635,
+    "a21_cal_mol": 14.218,
+    "alpha": 0.305,
+    "system": "6 Benzene/P-Xylene p310 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 1753,
+    "a12_cal_mol": 85.208,
+    "a21_cal_mol": 104.9548,
+    "alpha": 0.301,
+    "system": "9 Benzene/N.N-Diethylaniline p312 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 510,
+    "a12_cal_mol": 1915.7178,
+    "a21_cal_mol": -810.5032,
+    "alpha": 0.369,
+    "system": "3 Benzene/Isopropylbenzene p322 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 509,
+    "a12_cal_mol": -192.1433,
+    "a21_cal_mol": 141.5054,
+    "alpha": 0.303,
+    "system": "2 Benzene/Propylbenzene p323 1/7"
+  },
+  {
+    "id1": 501,
+    "id2": 560,
+    "a12_cal_mol": 64.1947,
+    "a21_cal_mol": 78.657,
+    "alpha": 0.302,
+    "system": "2 Benzene/M-Terphenyl p327 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1521,
+    "a12_cal_mol": -583.6169,
+    "a21_cal_mol": 629.2214,
+    "alpha": 0.2974,
+    "system": "Toluene/Chloroform p352 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 507,
+    "a12_cal_mol": 226.4602,
+    "a21_cal_mol": -241.7457,
+    "alpha": 0.2874,
+    "system": "Toluene/pXylene p444 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1761,
+    "a12_cal_mol": 537.4434,
+    "a21_cal_mol": 21.7626,
+    "alpha": 0.301,
+    "system": "1 Toluene/ Nitroethane p385 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1844,
+    "a12_cal_mol": 1063.2839,
+    "a21_cal_mol": 192.0041,
+    "alpha": 0.289,
+    "system": "8 Toluene/Dimethylsulfoxide p386 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1741,
+    "a12_cal_mol": 432.7908,
+    "a21_cal_mol": 592.5054,
+    "alpha": 0.296,
+    "system": "9 Toluene/Ethylenediamine p387 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1876,
+    "a12_cal_mol": -2260.2463,
+    "a21_cal_mol": 3666.1775,
+    "alpha": 0.071,
+    "system": "1 Toluene/N.N-Dimethylformamide p394 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1845,
+    "a12_cal_mol": 5175.2573,
+    "a21_cal_mol": 224.8869,
+    "alpha": 0.46,
+    "system": "0 Toluene/Sulfolane p399 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1791,
+    "a12_cal_mol": 264.6428,
+    "a21_cal_mol": -60.3423,
+    "alpha": 0.299,
+    "system": "2 Toluene/Pyridine p407 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1680,
+    "a12_cal_mol": -47.4722,
+    "a21_cal_mol": 15.063,
+    "alpha": 0.304,
+    "system": "9 Toluene/Bromobenzene p415 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1571,
+    "a12_cal_mol": -40.5158,
+    "a21_cal_mol": 15.0972,
+    "alpha": 0.303,
+    "system": "7 Toluene/Chlorobenzene p417 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1886,
+    "a12_cal_mol": 806.4313,
+    "a21_cal_mol": -288.9774,
+    "alpha": 0.296,
+    "system": "9 Toluene/Nitrobenzene p422 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1797,
+    "a12_cal_mol": 396.5492,
+    "a21_cal_mol": -97.1224,
+    "alpha": 0.302,
+    "system": "8 Toluene/2-Methylpyridine p432 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 2797,
+    "a12_cal_mol": -490.8706,
+    "a21_cal_mol": 1036.9557,
+    "alpha": 0.296,
+    "system": "3 Toluene/3-Methylpyridien p433 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 1790,
+    "a12_cal_mol": -676.6725,
+    "a21_cal_mol": 1239.9195,
+    "alpha": 0.3,
+    "system": "0 Toluene/Benzonitrile p435 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 504,
+    "a12_cal_mol": 663.0837,
+    "a21_cal_mol": -482.5109,
+    "alpha": 0.3,
+    "system": "5 Toluene/Ethylbenzene p443 1/7"
+  },
+  {
+    "id1": 502,
+    "id2": 507,
+    "a12_cal_mol": 226.4602,
+    "a21_cal_mol": -241.7457,
+    "alpha": 0.287,
+    "system": "4 Toluene/P-Xylene p444 1/7"
+  },
+  {
+    "id1": 504,
+    "id2": 601,
+    "a12_cal_mol": -539.7919,
+    "a21_cal_mol": 813.9959,
+    "alpha": 0.346,
+    "system": "6 Ethylbenzene/Styrene p451 1/7"
+  },
+  {
+    "id1": 504,
+    "id2": 1886,
+    "a12_cal_mol": 519.4154,
+    "a21_cal_mol": -64.0219,
+    "alpha": 0.3,
+    "system": "3 Ethylbenzene/Nitrobenzene p470 1/7"
+  },
+  {
+    "id1": 504,
+    "id2": 1792,
+    "a12_cal_mol": 243.6463,
+    "a21_cal_mol": 384.003,
+    "alpha": 0.298,
+    "system": "9 Ethylbenzene/Aniline p475 1/7"
+  },
+  {
+    "id1": 504,
+    "id2": 510,
+    "a12_cal_mol": 26.256,
+    "a21_cal_mol": -27.6358,
+    "alpha": 0.304,
+    "system": "3 Ethylbenzene/Isopropylbenzene p476 1/7"
+  },
+  {
+    "id1": 504,
+    "id2": 518,
+    "a12_cal_mol": -789.9294,
+    "a21_cal_mol": 957.1492,
+    "alpha": 0.302,
+    "system": "6 Ethylbenzene/Butylbenzene p477 1/7"
+  },
+  {
+    "id1": 505,
+    "id2": 1876,
+    "a12_cal_mol": 559.7795,
+    "a21_cal_mol": 332.8093,
+    "alpha": 0.294,
+    "system": "7 O-Xylene/N.N-Dimethylformamide p493 1/7"
+  },
+  {
+    "id1": 506,
+    "id2": 1876,
+    "a12_cal_mol": 308.9034,
+    "a21_cal_mol": 548.667,
+    "alpha": 0.296,
+    "system": "0 M-Xylene/N.N-Dimethylformamide p481 1/7"
+  },
+  {
+    "id1": 506,
+    "id2": 1792,
+    "a12_cal_mol": -259.4169,
+    "a21_cal_mol": 1034.4099,
+    "alpha": 0.299,
+    "system": "2 M-Xylene/Aniline p483 1/7"
+  },
+  {
+    "id1": 507,
+    "id2": 506,
+    "a12_cal_mol": 282.0248,
+    "a21_cal_mol": -254.9358,
+    "alpha": 0.308,
+    "system": "5 P-Xylene/M-Xylene p485 1/7"
+  },
+  {
+    "id1": 507,
+    "id2": 1876,
+    "a12_cal_mol": 153.1239,
+    "a21_cal_mol": 722.4999,
+    "alpha": 0.294,
+    "system": "2 P-Xylene/N.N-Dimethylformamide p501 1/7"
+  },
+  {
+    "id1": 507,
+    "id2": 1792,
+    "a12_cal_mol": 311.9792,
+    "a21_cal_mol": 408.2084,
+    "alpha": 0.297,
+    "system": "2 P-Xylene/Aniline p509 1/7"
+  },
+  {
+    "id1": 509,
+    "id2": 1886,
+    "a12_cal_mol": 329.7212,
+    "a21_cal_mol": 143.3943,
+    "alpha": 0.3,
+    "system": "7 Propylbenzene/Nitrobenzene p511 1/7"
+  },
+  {
+    "id1": 515,
+    "id2": 514,
+    "a12_cal_mol": 878.2759,
+    "a21_cal_mol": -655.9008,
+    "alpha": 0.326,
+    "system": "1 1.2.4-Trimethylbenzene/1.2.3-Trimethylbenzene p515 1/7"
+  },
+  {
+    "id1": 518,
+    "id2": 1886,
+    "a12_cal_mol": 370.6529,
+    "a21_cal_mol": 140.0817,
+    "alpha": 0.3,
+    "system": "3 Butylbenzene/Nitrobenzene p527 1/7"
+  },
+  {
+    "id1": 524,
+    "id2": 1792,
+    "a12_cal_mol": -118.3505,
+    "a21_cal_mol": 885.1196,
+    "alpha": 0.295,
+    "system": "0 P-Cymene/Aniline p529 1/7"
+  },
+  {
+    "id1": 601,
+    "id2": 509,
+    "a12_cal_mol": 649.8687,
+    "a21_cal_mol": -453.4673,
+    "alpha": 0.306,
+    "system": "7 Styrene/Propylbenzene p457 1/7"
+  },
+  {
+    "id1": 703,
+    "id2": 702,
+    "a12_cal_mol": -615.673,
+    "a21_cal_mol": 811.3338,
+    "alpha": 0.335,
+    "system": "3 2-MethylNaphthalene/1-MethylNaphthanlene p531 1/7"
+  },
+  {
+    "id1": 1003,
+    "id2": 1101,
+    "a12_cal_mol": 1046.6524,
+    "a21_cal_mol": -865.266,
+    "alpha": 0.3084,
+    "system": "PropionicAldehyde/Methanol p79 1/2c"
+  },
+  {
+    "id1": 1006,
+    "id2": 1921,
+    "a12_cal_mol": 1166.8333,
+    "a21_cal_mol": 1090.0262,
+    "alpha": 0.2862,
+    "system": "Isobutyraldehyde/Water p280 1/1a"
+  },
+  {
+    "id1": 1051,
+    "id2": 1101,
+    "a12_cal_mol": 184.2662,
+    "a21_cal_mol": 226.558,
+    "alpha": 0.3009,
+    "system": "Acetone/Methanol p78 1/2c"
+  },
+  {
+    "id1": 1051,
+    "id2": 1102,
+    "a12_cal_mol": 36.2965,
+    "a21_cal_mol": 434.8228,
+    "alpha": 0.2987,
+    "system": "Acetone/Ethanol p312 1/2c"
+  },
+  {
+    "id1": 1051,
+    "id2": 1521,
+    "a12_cal_mol": -651.1909,
+    "a21_cal_mol": 301.8389,
+    "alpha": 0.3054,
+    "system": "Acetone/Chloroform p92 1/3+4"
+  },
+  {
+    "id1": 1051,
+    "id2": 501,
+    "a12_cal_mol": -396.4935,
+    "a21_cal_mol": 886.5703,
+    "alpha": 0.2971,
+    "system": "Acetone/Benzene p195 1/3+4"
+  },
+  {
+    "id1": 1051,
+    "id2": 1181,
+    "a12_cal_mol": -754.9547,
+    "a21_cal_mol": -280.383,
+    "alpha": 0.3086,
+    "system": "Acetone/Phenol"
+  },
+  {
+    "id1": 1051,
+    "id2": 137,
+    "a12_cal_mol": 429.8705,
+    "a21_cal_mol": 727.649,
+    "alpha": 0.2925,
+    "system": "Acetone/CycloHexane p213 1/3+4"
+  },
+  {
+    "id1": 1051,
+    "id2": 502,
+    "a12_cal_mol": -247.9492,
+    "a21_cal_mol": 727.5102,
+    "alpha": 0.295,
+    "system": "Acetone/Toluene p236 1/3+4"
+  },
+  {
+    "id1": 1052,
+    "id2": 1103,
+    "a12_cal_mol": 148.867,
+    "a21_cal_mol": 213.3829,
+    "alpha": 0.3016,
+    "system": "2-Butanone/1-Propanol p496 1/2c"
+  },
+  {
+    "id1": 1052,
+    "id2": 501,
+    "a12_cal_mol": -644.8573,
+    "a21_cal_mol": 898.3999,
+    "alpha": 0.1563,
+    "system": "2-Butanone/Benzene p291 1/3+4"
+  },
+  {
+    "id1": 1052,
+    "id2": 137,
+    "a12_cal_mol": 605.7381,
+    "a21_cal_mol": 235.4493,
+    "alpha": 0.2963,
+    "system": "2-Butanone/CycloHexane p297 1/3+4"
+  },
+  {
+    "id1": 1052,
+    "id2": 502,
+    "a12_cal_mol": 503.0737,
+    "a21_cal_mol": -181.5533,
+    "alpha": 0.2996,
+    "system": "2-Butanone/Toluene p308 1/3+4"
+  },
+  {
+    "id1": 1052,
+    "id2": 17,
+    "a12_cal_mol": 681.5104,
+    "a21_cal_mol": 931.4616,
+    "alpha": 0.9809,
+    "system": "2-Butanone/n-Heptane p311 1/3+4"
+  },
+  {
+    "id1": 1052,
+    "id2": 1921,
+    "a12_cal_mol": 674.4614,
+    "a21_cal_mol": 1809.8868,
+    "alpha": 0.3536,
+    "system": "2-Butanone/Water p279 1/1a"
+  },
+  {
+    "id1": 1101,
+    "id2": 1501,
+    "a12_cal_mol": 378.8254,
+    "a21_cal_mol": 1430.7379,
+    "alpha": 0.2892,
+    "system": "Methanol/Tetrachloromethane p18 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1698,
+    "a12_cal_mol": 879.0968,
+    "a21_cal_mol": 1063.6098,
+    "alpha": 0.6381,
+    "system": "Methanol/Tribromomethane p19 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1772,
+    "a12_cal_mol": 343.7042,
+    "a21_cal_mol": 314.5879,
+    "alpha": 0.2981,
+    "system": "Methanol/Acetonitrile p42 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1523,
+    "a12_cal_mol": 348.6035,
+    "a21_cal_mol": 1020.1431,
+    "alpha": 0.2921,
+    "system": "Methanol/1.2-Dichloroethane p44 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1252,
+    "a12_cal_mol": 16.6465,
+    "a21_cal_mol": -217.1261,
+    "alpha": 0.3051,
+    "system": "Methanol/AceticAcid p46 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1102,
+    "a12_cal_mol": -327.9991,
+    "a21_cal_mol": 376.2667,
+    "alpha": 0.3057,
+    "system": "Methanol/Ethanol p60 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1844,
+    "a12_cal_mol": -168.3182,
+    "a21_cal_mol": -497.4171,
+    "alpha": 0.3079,
+    "system": "Methanol/Dimethylsulfoxide p61 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1253,
+    "a12_cal_mol": -50.145,
+    "a21_cal_mol": -78.0859,
+    "alpha": 0.3056,
+    "system": "Methanol/PropionicAcid p87 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1876,
+    "a12_cal_mol": -124.0904,
+    "a21_cal_mol": 0.3428,
+    "alpha": 9.1633,
+    "system": "Methanol/N.N-Dimethylformamide p88 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1103,
+    "a12_cal_mol": 24.9003,
+    "a21_cal_mol": 9.5349,
+    "alpha": 0.3011,
+    "system": "Methanol/Propanol p96 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1821,
+    "a12_cal_mol": -90.1051,
+    "a21_cal_mol": 1217.1035,
+    "alpha": 0.2976,
+    "system": "Methanol/Thiophene p101 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1341,
+    "a12_cal_mol": 676.836,
+    "a21_cal_mol": 169.9831,
+    "alpha": 0.2958,
+    "system": "Methanol/Methylacrylate p104 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1052,
+    "a12_cal_mol": 307.4271,
+    "a21_cal_mol": 217.9098,
+    "alpha": 0.3003,
+    "system": "Methanol/2-Butanone p106 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1479,
+    "a12_cal_mol": 169.4153,
+    "a21_cal_mol": 383.1579,
+    "alpha": 0.3002,
+    "system": "Methanol/Tetrahyrofuran p111 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1421,
+    "a12_cal_mol": 607.405,
+    "a21_cal_mol": 76.7683,
+    "alpha": 0.2985,
+    "system": "Methanol/1.4-Dioxane p116 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1313,
+    "a12_cal_mol": 345.5416,
+    "a21_cal_mol": 420.7355,
+    "alpha": 0.2962,
+    "system": "Methanol/Ethylacetate p117 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1845,
+    "a12_cal_mol": 1069.2756,
+    "a21_cal_mol": 906.5741,
+    "alpha": 0.7182,
+    "system": "Methanol/Sulfolane p120 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1105,
+    "a12_cal_mol": 793.8173,
+    "a21_cal_mol": -486.3299,
+    "alpha": 0.2483,
+    "system": "Methanol/1-Butanol p127 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1106,
+    "a12_cal_mol": -308.561,
+    "a21_cal_mol": 285.442,
+    "alpha": 0.3036,
+    "system": "Methanol/2-Butanol p128 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1241,
+    "a12_cal_mol": 446.952,
+    "a21_cal_mol": -450.5858,
+    "alpha": 0.3152,
+    "system": "Methanol/1.4-Butanediol p138 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1791,
+    "a12_cal_mol": -45.0888,
+    "a21_cal_mol": 84.1956,
+    "alpha": 0.3027,
+    "system": "Methanol/Pyridine p141 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1351,
+    "a12_cal_mol": 590.279,
+    "a21_cal_mol": 380.8401,
+    "alpha": 0.2963,
+    "system": "Methanol/MethylMethacrylate p152 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1061,
+    "a12_cal_mol": 642.3761,
+    "a21_cal_mol": -6.2901,
+    "alpha": 0.2987,
+    "system": "Methanol/MethylisopropylKetone p155 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1745,
+    "a12_cal_mol": 590.882,
+    "a21_cal_mol": -1169.7242,
+    "alpha": 0.1387,
+    "system": "Methanol/Piperidine p157 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1864,
+    "a12_cal_mol": 930.591,
+    "a21_cal_mol": 1244.1303,
+    "alpha": 0.4701,
+    "system": "Methanol/Hexafluorobenzene p170 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1571,
+    "a12_cal_mol": 857.0852,
+    "a21_cal_mol": 1348.0903,
+    "alpha": 0.4707,
+    "system": "Methanol/Chlorobenzene p174 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 501,
+    "a12_cal_mol": 721.6136,
+    "a21_cal_mol": 1158.5131,
+    "alpha": 0.4694,
+    "system": "Methanol/Benzene p191 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1792,
+    "a12_cal_mol": 407.744,
+    "a21_cal_mol": 117.2473,
+    "alpha": 0.3008,
+    "system": "Methanol/Aniline p192 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1797,
+    "a12_cal_mol": 226.082,
+    "a21_cal_mol": -385.6823,
+    "alpha": 0.3095,
+    "system": "Methanol/2-Methylpyridine p195 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 2797,
+    "a12_cal_mol": -163.4505,
+    "a21_cal_mol": -86.1482,
+    "alpha": 0.3075,
+    "system": "Methanol/3-Methylpyridine p196 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 2799,
+    "a12_cal_mol": 304.2242,
+    "a21_cal_mol": -452.3483,
+    "alpha": 0.3053,
+    "system": "Methanol/4-Methylpyridine p198 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 270,
+    "a12_cal_mol": 1178.5792,
+    "a21_cal_mol": 1618.9792,
+    "alpha": 0.4568,
+    "system": "Methanol/Cyclohexene p204 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 137,
+    "a12_cal_mol": 1315.1631,
+    "a21_cal_mol": 1497.2135,
+    "alpha": 0.4222,
+    "system": "Methanol/Cyclohexane p211 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1315,
+    "a12_cal_mol": 328.2162,
+    "a21_cal_mol": 453.0017,
+    "alpha": 0.2961,
+    "system": "Methanol/n-ButylAcetate p217 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 11,
+    "a12_cal_mol": 1619.3829,
+    "a21_cal_mol": 1622.2911,
+    "alpha": 0.4365,
+    "system": "Methanol/Hexane p224 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1706,
+    "a12_cal_mol": -476.8503,
+    "a21_cal_mol": 1126.1143,
+    "alpha": 0.2874,
+    "system": "Methanol/Triethylamine p226 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 502,
+    "a12_cal_mol": 939.7275,
+    "a21_cal_mol": 1090.9297,
+    "alpha": 0.4643,
+    "system": "Methanol/Toluene p237 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 2796,
+    "a12_cal_mol": -273.332,
+    "a21_cal_mol": 59.625,
+    "alpha": 0.3051,
+    "system": "Methanol/2.6-Dimethylpyridine p239 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 17,
+    "a12_cal_mol": 1313.5497,
+    "a21_cal_mol": 1143.9059,
+    "alpha": 0.4163,
+    "system": "Methanol/1-Heptane p241 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 138,
+    "a12_cal_mol": 1444.585,
+    "a21_cal_mol": 1719.4586,
+    "alpha": 0.4397,
+    "system": "Methanol/Methylcyclohexane p242 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 17,
+    "a12_cal_mol": 1500.2043,
+    "a21_cal_mol": 1519.3346,
+    "alpha": 0.4277,
+    "system": "Methanol/Heptane p243 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 504,
+    "a12_cal_mol": 1080.1231,
+    "a21_cal_mol": 1038.1572,
+    "alpha": 0.4251,
+    "system": "Methanol/Ethylbenzene p245 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 506,
+    "a12_cal_mol": 991.1609,
+    "a21_cal_mol": 822.1357,
+    "alpha": 0.291,
+    "system": "Methanol/M-xylene p246 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 507,
+    "a12_cal_mol": 974.6545,
+    "a21_cal_mol": 851.107,
+    "alpha": 0.2921,
+    "system": "Methanol/P-xylene p247 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 250,
+    "a12_cal_mol": 1456.3583,
+    "a21_cal_mol": 1147.8132,
+    "alpha": 0.4396,
+    "system": "Methanol/1-Octene p248 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 27,
+    "a12_cal_mol": 1681.6918,
+    "a21_cal_mol": 1511.4353,
+    "alpha": 0.4381,
+    "system": "Methanol/Octane p249 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 41,
+    "a12_cal_mol": 1447.0909,
+    "a21_cal_mol": 1386.4703,
+    "alpha": 0.4313,
+    "system": "Methanol/2.2.4-Trimethylpentane p250 1/2c"
+  },
+  {
+    "id1": 1101,
+    "id2": 1921,
+    "a12_cal_mol": -189.0469,
+    "a21_cal_mol": 792.802,
+    "alpha": 0.2999,
+    "system": "Methanol/Water p61 1/1a"
+  },
+  {
+    "id1": 1101,
+    "id2": 1521,
+    "a12_cal_mol": -105.4657,
+    "a21_cal_mol": 1335.3416,
+    "alpha": 0.2873,
+    "system": "Methanol/Chloroform p23 1/2a"
+  },
+  {
+    "id1": 1101,
+    "id2": 1102,
+    "a12_cal_mol": 67.2902,
+    "a21_cal_mol": -70.5092,
+    "alpha": 0.3009,
+    "system": "Methanol/Ethanol p55 1/2a"
+  },
+  {
+    "id1": 1101,
+    "id2": 1051,
+    "a12_cal_mol": 296.2432,
+    "a21_cal_mol": 118.0803,
+    "alpha": 0.3003,
+    "system": "Methanol/Acetone"
+  },
+  {
+    "id1": 1101,
+    "id2": 501,
+    "a12_cal_mol": 761.7553,
+    "a21_cal_mol": 1094.8556,
+    "alpha": 0.4893,
+    "system": "Methanol/Benzene p232 1/2a"
+  },
+  {
+    "id1": 1101,
+    "id2": 137,
+    "a12_cal_mol": 1313.9316,
+    "a21_cal_mol": 1862.4639,
+    "alpha": 0.441,
+    "system": "Methanol/CycloHexane p243 1/2a"
+  },
+  {
+    "id1": 1101,
+    "id2": 502,
+    "a12_cal_mol": 884.023,
+    "a21_cal_mol": 1008.0037,
+    "alpha": 0.4064,
+    "system": "Methanol/Toluene p269 1/2a"
+  },
+  {
+    "id1": 1101,
+    "id2": 17,
+    "a12_cal_mol": 1566.439,
+    "a21_cal_mol": 1598.3126,
+    "alpha": 0.4408,
+    "system": "Methanol/n-Heptane"
+  },
+  {
+    "id1": 1102,
+    "id2": 1542,
+    "a12_cal_mol": 685.8542,
+    "a21_cal_mol": 807.5935,
+    "alpha": 0.29,
+    "system": "Ethanol/Tetrachloroethylene p285 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1772,
+    "a12_cal_mol": 529.7267,
+    "a21_cal_mol": 338.1632,
+    "alpha": 0.2964,
+    "system": "Ethanol/Acetonitrile p289 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1523,
+    "a12_cal_mol": 333.3502,
+    "a21_cal_mol": 939.387,
+    "alpha": 0.2926,
+    "system": "Ethanol/1.2-Dichloroethane p292 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1252,
+    "a12_cal_mol": -34.1971,
+    "a21_cal_mol": -190.7763,
+    "alpha": 0.305,
+    "system": "Ethanol/Acetic Acid p293 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1201,
+    "a12_cal_mol": 1644.0484,
+    "a21_cal_mol": -203.7691,
+    "alpha": 0.3704,
+    "system": "Ethanol/1.2-Ethanediol p297 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1104,
+    "a12_cal_mol": 690.1392,
+    "a21_cal_mol": -529.3472,
+    "alpha": 0.3125,
+    "system": "Ethanol/2-Propanol p317 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1821,
+    "a12_cal_mol": 222.3096,
+    "a21_cal_mol": 1057.7115,
+    "alpha": 0.2918,
+    "system": "Ethanol/Thiophene p320 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1052,
+    "a12_cal_mol": 64.4957,
+    "a21_cal_mol": 463.1931,
+    "alpha": 0.301,
+    "system": "Ethanol/2-Butanone p327 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1421,
+    "a12_cal_mol": 505.5637,
+    "a21_cal_mol": 111.8389,
+    "alpha": 0.2988,
+    "system": "Ethanol/1.4-Dioxane p331 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1845,
+    "a12_cal_mol": 1195.1601,
+    "a21_cal_mol": 705.0897,
+    "alpha": 0.5676,
+    "system": "Ethanol/Sulfolane p341 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1106,
+    "a12_cal_mol": -559.8205,
+    "a21_cal_mol": 802.5411,
+    "alpha": 0.2721,
+    "system": "Ethanol/2-Butanol p346 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1106,
+    "a12_cal_mol": 53.1671,
+    "a21_cal_mol": 82.0442,
+    "alpha": 0.3023,
+    "system": "Ethanol/2-Methyl-1-Propanol p349 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1791,
+    "a12_cal_mol": 163.6655,
+    "a21_cal_mol": -169.9802,
+    "alpha": 0.3017,
+    "system": "Ethanol/Pyridine p356 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1351,
+    "a12_cal_mol": 456.9676,
+    "a21_cal_mol": 386.5893,
+    "alpha": 0.2963,
+    "system": "Ethanol/MethylMethacrylate p363 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1061,
+    "a12_cal_mol": -54.0946,
+    "a21_cal_mol": 639.6806,
+    "alpha": 0.3009,
+    "system": "Ethanol/Methylisopropyl p366 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1314,
+    "a12_cal_mol": 760.4933,
+    "a21_cal_mol": 129.397,
+    "alpha": 0.295,
+    "system": "Ethanol/PropylAcetate p367 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1123,
+    "a12_cal_mol": 51.1705,
+    "a21_cal_mol": -42.8613,
+    "alpha": 0.3009,
+    "system": "Ethanol/3-Methyl-1-butanol p377 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1680,
+    "a12_cal_mol": 820.8023,
+    "a21_cal_mol": 1349.6853,
+    "alpha": 0.4995,
+    "system": "Ethanol/Bromobenzene p378 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1571,
+    "a12_cal_mol": 645.7829,
+    "a21_cal_mol": 1383.711,
+    "alpha": 0.5229,
+    "system": "Ethanol/Chlorobezene p380 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 501,
+    "a12_cal_mol": 516.141,
+    "a21_cal_mol": 1065.9086,
+    "alpha": 0.4774,
+    "system": "Ethanol/Benzene p406 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1792,
+    "a12_cal_mol": 1823.3542,
+    "a21_cal_mol": -523.0474,
+    "alpha": 0.3005,
+    "system": "Ethanol/Aniline p410 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 2797,
+    "a12_cal_mol": 315.6078,
+    "a21_cal_mol": -339.0825,
+    "alpha": 0.3056,
+    "system": "Ethanol/3-Methylpyridine p412 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 137,
+    "a12_cal_mol": 876.7933,
+    "a21_cal_mol": 1390.4162,
+    "alpha": 0.4485,
+    "system": "Ethanol/Cyclohexane p419 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1151,
+    "a12_cal_mol": 1719.8644,
+    "a21_cal_mol": -833.8389,
+    "alpha": 0.292,
+    "system": "Ethanol/Cyclohexanol p421 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1315,
+    "a12_cal_mol": 841.9935,
+    "a21_cal_mol": -55.3231,
+    "alpha": 0.2958,
+    "system": "Ethanol/ButylAcetate p424 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1446,
+    "a12_cal_mol": 442.6124,
+    "a21_cal_mol": 634.1687,
+    "alpha": 0.2945,
+    "system": "Ethanol/Dipropylether p438 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1706,
+    "a12_cal_mol": -248.0407,
+    "a21_cal_mol": 697.9004,
+    "alpha": 0.2996,
+    "system": "Ethanol/Triethylamine p440 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 502,
+    "a12_cal_mol": 713.5653,
+    "a21_cal_mol": 1147.8607,
+    "alpha": 0.5292,
+    "system": "Ethanol/Toluene p444 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1461,
+    "a12_cal_mol": 3458.4788,
+    "a21_cal_mol": -1438.8884,
+    "alpha": 0.1704,
+    "system": "Ethanol/Anisole p445 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 2797,
+    "a12_cal_mol": -48.2159,
+    "a21_cal_mol": -19.6212,
+    "alpha": 0.3016,
+    "system": "Ethanol/2.6-Dimethylpyridine p447 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 138,
+    "a12_cal_mol": 552.3897,
+    "a21_cal_mol": 266.1248,
+    "alpha": 0.2964,
+    "system": "Ethanol/Pentylacetate p449 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 17,
+    "a12_cal_mol": 1137.265,
+    "a21_cal_mol": 1453.5947,
+    "alpha": 0.4786,
+    "system": "Ethanol/Heptane p459 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 504,
+    "a12_cal_mol": 801.7191,
+    "a21_cal_mol": 1006.8831,
+    "alpha": 0.4962,
+    "system": "Ethanol/Ethylbezene p460 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 507,
+    "a12_cal_mol": 768.3633,
+    "a21_cal_mol": 760.08,
+    "alpha": 0.2914,
+    "system": "Ethanol/P-xylene p461 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 27,
+    "a12_cal_mol": 1206.8097,
+    "a21_cal_mol": 1385.3721,
+    "alpha": 0.4717,
+    "system": "Ethanol/Octane p466 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 22,
+    "a12_cal_mol": 1091.0432,
+    "a21_cal_mol": 1500.6711,
+    "alpha": 0.4738,
+    "system": "Ethanol/2.2.4-Trimethylpentane p468 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 68,
+    "a12_cal_mol": 2359.4082,
+    "a21_cal_mol": 1509.2033,
+    "alpha": 0.4448,
+    "system": "Ethanol/Hexadecane p470 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1279,
+    "a12_cal_mol": 975.6816,
+    "a21_cal_mol": -343.5446,
+    "alpha": 0.2988,
+    "system": "Ethanol/Oleicacid p471 1/2c"
+  },
+  {
+    "id1": 1102,
+    "id2": 1921,
+    "a12_cal_mol": -57.9601,
+    "a21_cal_mol": 1241.7396,
+    "alpha": 0.2937,
+    "system": "Ethanol/Water"
+  },
+  {
+    "id1": 1102,
+    "id2": 1521,
+    "a12_cal_mol": -285.3881,
+    "a21_cal_mol": 1289.2198,
+    "alpha": 0.2909,
+    "system": "Ethanol/Chloroform p285 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 1051,
+    "a12_cal_mol": 375.3497,
+    "a21_cal_mol": 45.3706,
+    "alpha": 0.3006,
+    "system": "Ethanol/Acetone p323 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 1052,
+    "a12_cal_mol": 437.1923,
+    "a21_cal_mol": 33.6363,
+    "alpha": 0.3022,
+    "system": "Ethanol/2-Butanone p342 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 501,
+    "a12_cal_mol": 255.3591,
+    "a21_cal_mol": 1047.1959,
+    "alpha": 0.297,
+    "system": "Ethanol/Benzene p405 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 137,
+    "a12_cal_mol": 761.7739,
+    "a21_cal_mol": 1393.7993,
+    "alpha": 0.4376,
+    "system": "Ethanol/CycloHexane p441 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 502,
+    "a12_cal_mol": 542.4128,
+    "a21_cal_mol": 772.4394,
+    "alpha": 0.2937,
+    "system": "Ethanol/Toluene p470 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 17,
+    "a12_cal_mol": 1114.2947,
+    "a21_cal_mol": 1305.9242,
+    "alpha": 0.4758,
+    "system": "Ethanol/n-Heptane p489 1/2a"
+  },
+  {
+    "id1": 1102,
+    "id2": 507,
+    "a12_cal_mol": 1020.8405,
+    "a21_cal_mol": 889.3461,
+    "alpha": 0.618,
+    "system": "Ethanol/p-Xylene p500 1/2a"
+  },
+  {
+    "id1": 1103,
+    "id2": 1542,
+    "a12_cal_mol": 608.3777,
+    "a21_cal_mol": 646.0412,
+    "alpha": 0.2913,
+    "system": "1-Propanol/Tetrachloroethylene p473 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1252,
+    "a12_cal_mol": 256.8999,
+    "a21_cal_mol": -327.5173,
+    "alpha": 0.3044,
+    "system": "1-Propanol/Aceticacid p479 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1253,
+    "a12_cal_mol": -189.7856,
+    "a21_cal_mol": -32.4657,
+    "alpha": 0.307,
+    "system": "1-Propanol/Propionicacid p486 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 2860,
+    "a12_cal_mol": -406.3767,
+    "a21_cal_mol": 830.8897,
+    "alpha": 0.3013,
+    "system": "1-Propanol/2-Methoxy-ethanol p490 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1711,
+    "a12_cal_mol": -602.9687,
+    "a21_cal_mol": -45.3543,
+    "alpha": 0.3061,
+    "system": "Propylamine/1-Propanol p492 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1278,
+    "a12_cal_mol": 276.6356,
+    "a21_cal_mol": -423.9162,
+    "alpha": 0.3025,
+    "system": "1-Propanol/Methacrylicacid p495 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1106,
+    "a12_cal_mol": -2.8139,
+    "a21_cal_mol": -13.8657,
+    "alpha": 0.3034,
+    "system": "1-Propanol/2-Methyl-1-Propanol p505 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1791,
+    "a12_cal_mol": 374.8691,
+    "a21_cal_mol": -412.2861,
+    "alpha": 0.311,
+    "system": "1-Propanol/Pyridine p513 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1351,
+    "a12_cal_mol": 504.09,
+    "a21_cal_mol": 125.6451,
+    "alpha": 0.2993,
+    "system": "1-Propanol/Methylmethacrylate p514 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1314,
+    "a12_cal_mol": 340.021,
+    "a21_cal_mol": 111.7437,
+    "alpha": 0.3005,
+    "system": "1-Propnaol/Propylacetate p517 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1123,
+    "a12_cal_mol": 12.2207,
+    "a21_cal_mol": -31.8303,
+    "alpha": 0.3033,
+    "system": "1-Propanol/3-Methylbutanol p521 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1571,
+    "a12_cal_mol": 456.2867,
+    "a21_cal_mol": 538.5114,
+    "alpha": 0.2946,
+    "system": "1-Propnaol/Chlorobenzene p527 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1797,
+    "a12_cal_mol": 529.6444,
+    "a21_cal_mol": -608.3163,
+    "alpha": 0.3054,
+    "system": "1-Propanol/2-Methylpyridine p538 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 2797,
+    "a12_cal_mol": 479.7439,
+    "a21_cal_mol": -540.4699,
+    "alpha": 0.3045,
+    "system": "1-Propanol/3-Methylpyridine p539 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 2799,
+    "a12_cal_mol": 523.8291,
+    "a21_cal_mol": -603.0924,
+    "alpha": 0.3084,
+    "system": "1-Propanol/4-Methylpyridine p540 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1707,
+    "a12_cal_mol": 617.3558,
+    "a21_cal_mol": -459.5845,
+    "alpha": 0.2892,
+    "system": "1-Propanol/Dipropylamine p551 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1965,
+    "a12_cal_mol": 1615.0711,
+    "a21_cal_mol": -498.3638,
+    "alpha": 0.1028,
+    "system": "1-Propanol/Hexamethyldisiloxane p555 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 502,
+    "a12_cal_mol": 25.622,
+    "a21_cal_mol": 922.0009,
+    "alpha": 0.0175,
+    "system": "1-Propanol/Toluene p556 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 2796,
+    "a12_cal_mol": 472.9353,
+    "a21_cal_mol": -545.1853,
+    "alpha": 0.296,
+    "system": "1-Propnaol/2.6-Dimethylpyridine p557 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 17,
+    "a12_cal_mol": 1198.972,
+    "a21_cal_mol": 1377.2975,
+    "alpha": 0.5193,
+    "system": "1-Propanol/Heptane p573 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 504,
+    "a12_cal_mol": 563.6173,
+    "a21_cal_mol": 475.5966,
+    "alpha": 0.2921,
+    "system": "1-Propanol/P-xylene p574 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 27,
+    "a12_cal_mol": 1109.304,
+    "a21_cal_mol": 334.2112,
+    "alpha": 0.2907,
+    "system": "1-Propanol/Octane p576 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 56,
+    "a12_cal_mol": 945.3159,
+    "a21_cal_mol": 520.2926,
+    "alpha": 0.2895,
+    "system": "1-Propanol/Decane p577 1/2c"
+  },
+  {
+    "id1": 1103,
+    "id2": 1136,
+    "a12_cal_mol": 1068.0694,
+    "a21_cal_mol": -588.3325,
+    "alpha": 0.2958,
+    "system": "1-Propanol/1-Decanol 579 1/2c"
+  },
+  {
+    "id1": 1104,
+    "id2": 1103,
+    "a12_cal_mol": 167.2501,
+    "a21_cal_mol": -175.2928,
+    "alpha": 0.3057,
+    "system": "2-Propanol/1-Propanol p488 1/2c"
+  },
+  {
+    "id1": 1106,
+    "id2": 1921,
+    "a12_cal_mol": 639.8173,
+    "a21_cal_mol": 2491.0163,
+    "alpha": 0.4385,
+    "system": "isobutanol/Water p339 1/1a"
+  },
+  {
+    "id1": 1108,
+    "id2": 1921,
+    "a12_cal_mol": 471.7718,
+    "a21_cal_mol": 2030.8877,
+    "alpha": 0.5155,
+    "system": "Tert-butanol/Water p343 1/1a"
+  },
+  {
+    "id1": 1301,
+    "id2": 1101,
+    "a12_cal_mol": 584.572,
+    "a21_cal_mol": 298.5567,
+    "alpha": 0.2962,
+    "system": "MethylFormate/Methanol p51 1/2c"
+  },
+  {
+    "id1": 1312,
+    "id2": 1101,
+    "a12_cal_mol": 381.4559,
+    "a21_cal_mol": 346.536,
+    "alpha": 0.2965,
+    "system": "MethylAcetate/Methanol p86 1/2c"
+  },
+  {
+    "id1": 1312,
+    "id2": 1102,
+    "a12_cal_mol": 188.3139,
+    "a21_cal_mol": 158.0118,
+    "alpha": 0.3013,
+    "system": "MethylAcetate/Ethanol p315 1/2c"
+  },
+  {
+    "id1": 1313,
+    "id2": 1102,
+    "a12_cal_mol": 305.6041,
+    "a21_cal_mol": 330.5105,
+    "alpha": 0.2988,
+    "system": "EthylAcetate/Ethanol p338 1/2c"
+  },
+  {
+    "id1": 1313,
+    "id2": 1921,
+    "a12_cal_mol": 1285.988,
+    "a21_cal_mol": 1606.082,
+    "alpha": 0.4393,
+    "system": "Ethylacetate/Water p304 1/1a"
+  },
+  {
+    "id1": 1321,
+    "id2": 1102,
+    "a12_cal_mol": 505.1637,
+    "a21_cal_mol": 320.7403,
+    "alpha": 0.2959,
+    "system": "VinylAcetate/Ethanol p324 1/2c"
+  },
+  {
+    "id1": 1402,
+    "id2": 1101,
+    "a12_cal_mol": 705.9989,
+    "a21_cal_mol": 211.158,
+    "alpha": 0.2953,
+    "system": "DiethylEther/Methanol p133 1/2c"
+  },
+  {
+    "id1": 1402,
+    "id2": 1102,
+    "a12_cal_mol": 763.6707,
+    "a21_cal_mol": 71.1984,
+    "alpha": 0.2946,
+    "system": "DiethylEther/Ethanol p347 1/2c"
+  },
+  {
+    "id1": 1402,
+    "id2": 1921,
+    "a12_cal_mol": 1544.0251,
+    "a21_cal_mol": 2086.4776,
+    "alpha": 0.3792,
+    "system": "Diethylether/Water p344 1/1a"
+  },
+  {
+    "id1": 1403,
+    "id2": 1921,
+    "a12_cal_mol": 2665.1471,
+    "a21_cal_mol": 4202.0746,
+    "alpha": 0.5409,
+    "system": "Diisopropylether/Water p421 1/1a"
+  },
+  {
+    "id1": 1405,
+    "id2": 1101,
+    "a12_cal_mol": 851.4954,
+    "a21_cal_mol": 465.836,
+    "alpha": 0.8178,
+    "system": "MethylTert-ButylEther/Methanol p160 1/2c"
+  },
+  {
+    "id1": 1431,
+    "id2": 1101,
+    "a12_cal_mol": 608.9115,
+    "a21_cal_mol": 712.0226,
+    "alpha": 0.7259,
+    "system": "Dimethoxymethane/Methanol p97 1/2c"
+  },
+  {
+    "id1": 1431,
+    "id2": 1921,
+    "a12_cal_mol": 1608.07,
+    "a21_cal_mol": 1818.2947,
+    "alpha": 0.4898,
+    "system": "Dimethoxymethane/Water p252 1/1a"
+  },
+  {
+    "id1": 1442,
+    "id2": 1101,
+    "a12_cal_mol": 924.8499,
+    "a21_cal_mol": -61.1796,
+    "alpha": 0.2986,
+    "system": "PropyleneOxide/Methanol p80 1/2c"
+  },
+  {
+    "id1": 1479,
+    "id2": 1102,
+    "a12_cal_mol": 661.3708,
+    "a21_cal_mol": -200.6915,
+    "alpha": 0.3015,
+    "system": "Tetrahydrofuran/Ethanol p328 1/2c"
+  },
+  {
+    "id1": 1479,
+    "id2": 1103,
+    "a12_cal_mol": 562.4611,
+    "a21_cal_mol": -302.2498,
+    "alpha": 0.3003,
+    "system": "Tetrahydrofuran/1-Propanol p497 1/2c"
+  },
+  {
+    "id1": 1479,
+    "id2": 1921,
+    "a12_cal_mol": 915.745,
+    "a21_cal_mol": 1725.0977,
+    "alpha": 0.4522,
+    "system": "Tetrahydrofuran/Water p286 1/1a"
+  },
+  {
+    "id1": 1501,
+    "id2": 1101,
+    "a12_cal_mol": 1339.9,
+    "a21_cal_mol": 488.6648,
+    "alpha": 0.4622,
+    "system": "Tetrachloromethane/Methanol p279 1/2c"
+  },
+  {
+    "id1": 1501,
+    "id2": 1103,
+    "a12_cal_mol": 1537.6384,
+    "a21_cal_mol": 537.2439,
+    "alpha": 0.631,
+    "system": "Tertachloromethane/1-Propanol p472 1/2c"
+  },
+  {
+    "id1": 1501,
+    "id2": 501,
+    "a12_cal_mol": -4.9421,
+    "a21_cal_mol": 84.0212,
+    "alpha": 0.305,
+    "system": "5 Tetrachloromethane/Benzene p58 1/7"
+  },
+  {
+    "id1": 1501,
+    "id2": 502,
+    "a12_cal_mol": -69.681,
+    "a21_cal_mol": 95.3839,
+    "alpha": 0.304,
+    "system": "1 Tetrachloromethane/Toluene p351 1/7"
+  },
+  {
+    "id1": 1501,
+    "id2": 504,
+    "a12_cal_mol": -172.3762,
+    "a21_cal_mol": 122.4657,
+    "alpha": 0.303,
+    "system": "4 Tetrachloromethane/Ethylbenzene p464 1/7"
+  },
+  {
+    "id1": 1501,
+    "id2": 506,
+    "a12_cal_mol": -232.4578,
+    "a21_cal_mol": 163.8924,
+    "alpha": 0.304,
+    "system": "7 Tetrachloromethane/M-Xylene p480 1/7"
+  },
+  {
+    "id1": 1501,
+    "id2": 507,
+    "a12_cal_mol": -192.9687,
+    "a21_cal_mol": 121.7193,
+    "alpha": 0.304,
+    "system": "4 Tetrachloromethane/P-Xylene p498 1/7"
+  },
+  {
+    "id1": 1501,
+    "id2": 510,
+    "a12_cal_mol": -106.8166,
+    "a21_cal_mol": 13.4903,
+    "alpha": 0.303,
+    "system": "3 Tetrachloromethane/Isopropylbenzene p510 1/7"
+  },
+  {
+    "id1": 1502,
+    "id2": 501,
+    "a12_cal_mol": 176.8791,
+    "a21_cal_mol": -288.2136,
+    "alpha": 0.306,
+    "system": "1 Chloroform/Benzene p72 1/7"
+  },
+  {
+    "id1": 1504,
+    "id2": 1101,
+    "a12_cal_mol": 1789.7165,
+    "a21_cal_mol": -34.9448,
+    "alpha": 0.2912,
+    "system": "VinylCloride/Methanol p36 1/2c"
+  },
+  {
+    "id1": 1511,
+    "id2": 1101,
+    "a12_cal_mol": 1560.0282,
+    "a21_cal_mol": 441.3372,
+    "alpha": 0.6234,
+    "system": "Dichloromethane/Methanol p26 1/2c"
+  },
+  {
+    "id1": 1511,
+    "id2": 1102,
+    "a12_cal_mol": 1332.8036,
+    "a21_cal_mol": -153.0761,
+    "alpha": 0.3057,
+    "system": "Dichloromethane/Ethanol p284 1/2c"
+  },
+  {
+    "id1": 1521,
+    "id2": 1101,
+    "a12_cal_mol": 1414.2712,
+    "a21_cal_mol": -141.803,
+    "alpha": 0.2949,
+    "system": "Chloroform/Methanol p25 1/2c"
+  },
+  {
+    "id1": 1521,
+    "id2": 1102,
+    "a12_cal_mol": 1438.3602,
+    "a21_cal_mol": -327.5518,
+    "alpha": 0.3023,
+    "system": "Chloroform/Ethanol p282 1/2c"
+  },
+  {
+    "id1": 1521,
+    "id2": 502,
+    "a12_cal_mol": 629.2214,
+    "a21_cal_mol": -583.6169,
+    "alpha": 0.297,
+    "system": "4 Chloroform/Toluene p352 1/7"
+  },
+  {
+    "id1": 1523,
+    "id2": 1103,
+    "a12_cal_mol": 636.9927,
+    "a21_cal_mol": 364.0596,
+    "alpha": 0.2956,
+    "system": "1.2-Dichloroethane/1-Propanol p478 1/2c"
+  },
+  {
+    "id1": 1523,
+    "id2": 502,
+    "a12_cal_mol": -217.7768,
+    "a21_cal_mol": 251.5704,
+    "alpha": 0.309,
+    "system": "7 1.2-Dichloroethane/Toluene p384 1/7"
+  },
+  {
+    "id1": 1523,
+    "id2": 505,
+    "a12_cal_mol": 718.2538,
+    "a21_cal_mol": -479.1971,
+    "alpha": 0.287,
+    "system": "0 1.2-Dichloroethane/O-Xylene p490 1/7"
+  },
+  {
+    "id1": 1523,
+    "id2": 507,
+    "a12_cal_mol": 848.1184,
+    "a21_cal_mol": -557.9036,
+    "alpha": 0.273,
+    "system": "3 1.2-Dichloroethane/P-Xylene p500 1/7"
+  },
+  {
+    "id1": 1527,
+    "id2": 501,
+    "a12_cal_mol": -73.4845,
+    "a21_cal_mol": 97.5682,
+    "alpha": 0.303,
+    "system": "8 1.1.1-trichloroethane/Benzene p121 1/7"
+  },
+  {
+    "id1": 1541,
+    "id2": 1103,
+    "a12_cal_mol": 926.6139,
+    "a21_cal_mol": 196.0696,
+    "alpha": 0.3007,
+    "system": "Trichloroethylene/1-Propanol p474 1/2c"
+  },
+  {
+    "id1": 1541,
+    "id2": 502,
+    "a12_cal_mol": 185.3799,
+    "a21_cal_mol": -250.7688,
+    "alpha": 0.306,
+    "system": "2 Trichloroethylene/Toluenep 370 1/7"
+  },
+  {
+    "id1": 1571,
+    "id2": 504,
+    "a12_cal_mol": 357.7079,
+    "a21_cal_mol": -307.8057,
+    "alpha": 0.307,
+    "system": "6 Chlorobenzene/Ethylbenzene p469 1/7"
+  },
+  {
+    "id1": 1571,
+    "id2": 507,
+    "a12_cal_mol": -395.6312,
+    "a21_cal_mol": 359.7555,
+    "alpha": 0.305,
+    "system": "5 Chlorobenzene/P-Xylene p508 1/7"
+  },
+  {
+    "id1": 1586,
+    "id2": 1103,
+    "a12_cal_mol": 1201.9959,
+    "a21_cal_mol": 506.8982,
+    "alpha": 0.5468,
+    "system": "Butylchloride/1-Propanol p502 1/2c"
+  },
+  {
+    "id1": 1681,
+    "id2": 501,
+    "a12_cal_mol": 294.4424,
+    "a21_cal_mol": -185.2944,
+    "alpha": 0.301,
+    "system": "3 MethylIodide/Benzene p84 1/7"
+  },
+  {
+    "id1": 1682,
+    "id2": 501,
+    "a12_cal_mol": 394.5891,
+    "a21_cal_mol": 298.1172,
+    "alpha": 0.3,
+    "system": "4 EthylIodide/Benzene p160 1/7"
+  },
+  {
+    "id1": 1702,
+    "id2": 1101,
+    "a12_cal_mol": -1018.143,
+    "a21_cal_mol": -54.3882,
+    "alpha": 0.3134,
+    "system": "Dimethylamine/Methanol p64 1/2c"
+  },
+  {
+    "id1": 1702,
+    "id2": 1102,
+    "a12_cal_mol": -1224.5739,
+    "a21_cal_mol": 370.7683,
+    "alpha": 0.3105,
+    "system": "Dimethylamine/Ethanol p299 1/2c"
+  },
+  {
+    "id1": 1702,
+    "id2": 1103,
+    "a12_cal_mol": 81.487,
+    "a21_cal_mol": -703.3731,
+    "alpha": 0.2697,
+    "system": "Dimethylamine/1-Propanol p484 1/2c"
+  },
+  {
+    "id1": 1706,
+    "id2": 1103,
+    "a12_cal_mol": 991.6157,
+    "a21_cal_mol": -435.2018,
+    "alpha": 0.3067,
+    "system": "Triethylamine/1-Propanol p552 1/2c"
+  },
+  {
+    "id1": 1706,
+    "id2": 1921,
+    "a12_cal_mol": -5096.528,
+    "a21_cal_mol": 28437.138,
+    "alpha": 0.0381,
+    "system": "Triethylamine/Water p444 1/1a"
+  },
+  {
+    "id1": 1710,
+    "id2": 1921,
+    "a12_cal_mol": -169.1652,
+    "a21_cal_mol": 1372.3121,
+    "alpha": 0.2932,
+    "system": "Diethylamine/Water p355 1/1a"
+  },
+  {
+    "id1": 1710,
+    "id2": 501,
+    "a12_cal_mol": 52.3512,
+    "a21_cal_mol": -42.2029,
+    "alpha": 0.281,
+    "system": "3 Diethylamine/Benzene p207 1/7"
+  },
+  {
+    "id1": 1710,
+    "id2": 502,
+    "a12_cal_mol": 91.4853,
+    "a21_cal_mol": -153.9388,
+    "alpha": 5.101,
+    "system": "2 Diethylamine/Toluene p400 1/7"
+  },
+  {
+    "id1": 1710,
+    "id2": 504,
+    "a12_cal_mol": 928.9662,
+    "a21_cal_mol": -553.9006,
+    "alpha": 0.345,
+    "system": "7 Diethylamine/Ethylbenzene p468 1/7"
+  },
+  {
+    "id1": 1711,
+    "id2": 1921,
+    "a12_cal_mol": -455.9152,
+    "a21_cal_mol": 1301.6396,
+    "alpha": 0.2981,
+    "system": "Propylamine/Water p267 1/1a"
+  },
+  {
+    "id1": 1712,
+    "id2": 1102,
+    "a12_cal_mol": -612.3956,
+    "a21_cal_mol": -5.7834,
+    "alpha": 0.3062,
+    "system": "Butylamine/Ethanol p351 1/2c"
+  },
+  {
+    "id1": 1712,
+    "id2": 1103,
+    "a12_cal_mol": -698.951,
+    "a21_cal_mol": 34.7593,
+    "alpha": 0.3001,
+    "system": "Butylamine/1-Propanol p510 1/2c"
+  },
+  {
+    "id1": 1712,
+    "id2": 1921,
+    "a12_cal_mol": 160.3429,
+    "a21_cal_mol": 2104.4002,
+    "alpha": 0.6379,
+    "system": "n-Butylamine/Water p354 1/1a"
+  },
+  {
+    "id1": 1712,
+    "id2": 501,
+    "a12_cal_mol": 65.9717,
+    "a21_cal_mol": 67.1231,
+    "alpha": 0.302,
+    "system": "4 Butylamine/Benzene p201 1/7"
+  },
+  {
+    "id1": 1727,
+    "id2": 501,
+    "a12_cal_mol": -344.6666,
+    "a21_cal_mol": 757.993,
+    "alpha": 0.306,
+    "system": "7 Tert.Butylamine/Benzene p202 1/7"
+  },
+  {
+    "id1": 1741,
+    "id2": 505,
+    "a12_cal_mol": 1357.7269,
+    "a21_cal_mol": -110.2727,
+    "alpha": 0.196,
+    "system": "7 Ethylenediamine/O-Xylene p491 1/7"
+  },
+  {
+    "id1": 1772,
+    "id2": 502,
+    "a12_cal_mol": 790.725,
+    "a21_cal_mol": 724.0955,
+    "alpha": 0.935,
+    "system": "3 Acetonitrile/Toluene p373 1/7"
+  },
+  {
+    "id1": 1772,
+    "id2": 504,
+    "a12_cal_mol": 1102.5396,
+    "a21_cal_mol": 5.3234,
+    "alpha": 0.298,
+    "system": "0 Acetonitrile/Ethylbenzene p465 1/7"
+  },
+  {
+    "id1": 1772,
+    "id2": 507,
+    "a12_cal_mol": 1413.0042,
+    "a21_cal_mol": -210.0314,
+    "alpha": 0.293,
+    "system": "8 Acetonitrile/P-Xylene p499 1/7"
+  },
+  {
+    "id1": 1773,
+    "id2": 502,
+    "a12_cal_mol": -95.6685,
+    "a21_cal_mol": 717.0741,
+    "alpha": 0.3,
+    "system": "9 Propionitrile/Toluene p388 1/7"
+  },
+  {
+    "id1": 1774,
+    "id2": 601,
+    "a12_cal_mol": 598.0263,
+    "a21_cal_mol": -130.4323,
+    "alpha": 0.302,
+    "system": "3 Acrylontrile/Styrene p446 1/7"
+  },
+  {
+    "id1": 1774,
+    "id2": 504,
+    "a12_cal_mol": 1304.6073,
+    "a21_cal_mol": -338.2481,
+    "alpha": 0.299,
+    "system": "4 Acrylonitrile/Ethylbenzene p467 1/7"
+  },
+  {
+    "id1": 1791,
+    "id2": 506,
+    "a12_cal_mol": -78.8985,
+    "a21_cal_mol": 351.0029,
+    "alpha": 0.3,
+    "system": "9 Pyridine/M-Xylene p482 1/7"
+  },
+  {
+    "id1": 1821,
+    "id2": 502,
+    "a12_cal_mol": 510.1471,
+    "a21_cal_mol": -197.5696,
+    "alpha": 0.301,
+    "system": "5 Thiophene/Toluene 395 1/7"
+  },
+  {
+    "id1": 1860,
+    "id2": 502,
+    "a12_cal_mol": 386.4643,
+    "a21_cal_mol": -304.6112,
+    "alpha": 0.308,
+    "system": "3 Fluorobenzene/Toluene p421 1/7"
+  },
+  {
+    "id1": 1864,
+    "id2": 1103,
+    "a12_cal_mol": 922.5224,
+    "a21_cal_mol": 528.5894,
+    "alpha": 0.2937,
+    "system": "Hexafluorobenzene/1-Propnaol p526 1/2c"
+  },
+  {
+    "id1": 1864,
+    "id2": 502,
+    "a12_cal_mol": 668.6525,
+    "a21_cal_mol": -666.7128,
+    "alpha": 0.241,
+    "system": "4 Hexafluorobenzene/Toluene p414 1/7"
+  },
+  {
+    "id1": 1864,
+    "id2": 507,
+    "a12_cal_mol": 1004.5491,
+    "a21_cal_mol": -949.1003,
+    "alpha": 0.29,
+    "system": "6 Hexafluorobenzene/P-Xylene p507 1/7"
+  },
+  {
+    "id1": 1921,
+    "id2": 1051,
+    "a12_cal_mol": 1324.9767,
+    "a21_cal_mol": 814.1435,
+    "alpha": 0.5663,
+    "system": "Water/Acetone 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1052,
+    "a12_cal_mol": 653.9718,
+    "a21_cal_mol": 1883.6007,
+    "alpha": 0.3607,
+    "system": "Water/2-Butanone p277 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1181,
+    "a12_cal_mol": 2419.3354,
+    "a21_cal_mol": 1844.3794,
+    "alpha": 0.6308,
+    "system": "Water/Phenol p394 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1529,
+    "a12_cal_mol": 2435.8879,
+    "a21_cal_mol": 102.7658,
+    "alpha": 0.0972,
+    "system": "Water/1.1.2.2-tetrachloroethane p64 1/1 2-propanol/Water p251 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1421,
+    "a12_cal_mol": 715.9592,
+    "a21_cal_mol": 548.8965,
+    "alpha": 0.292,
+    "system": "Water/1.4-Dioxane p303 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1845,
+    "a12_cal_mol": 1160.1372,
+    "a21_cal_mol": 467.9008,
+    "alpha": 0.5573,
+    "system": "Water/Sulfolane p307 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 2856,
+    "a12_cal_mol": 75.5965,
+    "a21_cal_mol": 328.8977,
+    "alpha": 0.3009,
+    "system": "Water/N.n-dimethylacetamide p325 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1765,
+    "a12_cal_mol": -803.1654,
+    "a21_cal_mol": 1732.7268,
+    "alpha": 0.2954,
+    "system": "Water/Morpholine p327 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1105,
+    "a12_cal_mol": 2633.6951,
+    "a21_cal_mol": 504.0381,
+    "alpha": 0.4447,
+    "system": "Water/n-Butanol p336 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1241,
+    "a12_cal_mol": 1310.8994,
+    "a21_cal_mol": 1920.1402,
+    "alpha": 0.5778,
+    "system": "Water/1.4-Butanediol p346 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1238,
+    "a12_cal_mol": 2531.7402,
+    "a21_cal_mol": -758.0034,
+    "alpha": 0.302,
+    "system": "Water/2.3-Butanediol p351 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1202,
+    "a12_cal_mol": 1186.7304,
+    "a21_cal_mol": -99.9,
+    "alpha": 0.2974,
+    "system": "Water/Diethylenegylcol p352 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1889,
+    "a12_cal_mol": 2602.6374,
+    "a21_cal_mol": 436.9686,
+    "alpha": 0.395,
+    "system": "Water/Furfural p361 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1791,
+    "a12_cal_mol": 1835.0881,
+    "a21_cal_mol": 419.8087,
+    "alpha": 0.6802,
+    "system": "Water/Pyridine p374 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1767,
+    "a12_cal_mol": -239.6197,
+    "a21_cal_mol": 573.8298,
+    "alpha": 0.3055,
+    "system": "Water/n-Methylpyrrolidone p380 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1123,
+    "a12_cal_mol": 3633.533,
+    "a21_cal_mol": -494.8389,
+    "alpha": 0.2816,
+    "system": "Water/3-Methylbutanol p382 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1111,
+    "a12_cal_mol": 19947.2334,
+    "a21_cal_mol": -15910.4563,
+    "alpha": 0.0056,
+    "system": "Water/2-Methyl-2-butanol p384 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1181,
+    "a12_cal_mol": 2385.3714,
+    "a21_cal_mol": 282.697,
+    "alpha": 0.4942,
+    "system": "Water/Phenol p399 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1792,
+    "a12_cal_mol": 11965.5274,
+    "a21_cal_mol": -7391.5468,
+    "alpha": 0.0235,
+    "system": "Water/Aniline p401 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1797,
+    "a12_cal_mol": 1979.5492,
+    "a21_cal_mol": 197.0009,
+    "alpha": 0.6371,
+    "system": "Water/2-Methylpyridine p402 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 2797,
+    "a12_cal_mol": 2559.3708,
+    "a21_cal_mol": 418.7524,
+    "alpha": 0.5361,
+    "system": "Water/3-Methylpyridine p406 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 2799,
+    "a12_cal_mol": 2325.9141,
+    "a21_cal_mol": 162.3029,
+    "alpha": 0.5622,
+    "system": "Water/4-Methylpyridine p408 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1757,
+    "a12_cal_mol": 1473.9606,
+    "a21_cal_mol": -66.4169,
+    "alpha": 0.0811,
+    "system": "Water/Phenylhydrazine p409 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1080,
+    "a12_cal_mol": 2983.8991,
+    "a21_cal_mol": -171.666,
+    "alpha": 0.2673,
+    "system": "Water/Cyclohexanone p410 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1065,
+    "a12_cal_mol": 2121.4973,
+    "a21_cal_mol": 101.3068,
+    "alpha": 0.1504,
+    "system": "Water/Mesityloxide p411 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1151,
+    "a12_cal_mol": 2232.9727,
+    "a21_cal_mol": 641.3504,
+    "alpha": 0.4399,
+    "system": "Water/Cyclohexanol p415 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1315,
+    "a12_cal_mol": 3805.0038,
+    "a21_cal_mol": 918.2419,
+    "alpha": 0.2951,
+    "system": "Water/n-Butylacetate p418 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 2854,
+    "a12_cal_mol": 1323.2731,
+    "a21_cal_mol": 845.9826,
+    "alpha": 0.678,
+    "system": "Water/Diacetonealcohol p419 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1114,
+    "a12_cal_mol": 2991.1845,
+    "a21_cal_mol": -464.8054,
+    "alpha": 0.1563,
+    "system": "Water/1-Hexanol p426 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1115,
+    "a12_cal_mol": 1880.1699,
+    "a21_cal_mol": 489.1746,
+    "alpha": 0.2938,
+    "system": "Water/2-Hexanol p427 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 2862,
+    "a12_cal_mol": 1914.0077,
+    "a21_cal_mol": 220.0262,
+    "alpha": 0.4776,
+    "system": "Water/2-butoxy-ethanol p433 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1180,
+    "a12_cal_mol": 4689.8409,
+    "a21_cal_mol": 301.3998,
+    "alpha": 0.3168,
+    "system": "Water/Benzylalcohol p450 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 2796,
+    "a12_cal_mol": 2222.596,
+    "a21_cal_mol": 831.9908,
+    "alpha": 0.5706,
+    "system": "Water/2.6-Dimethylpyridinr p457 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1317,
+    "a12_cal_mol": 1874.8967,
+    "a21_cal_mol": 856.9565,
+    "alpha": 0.3734,
+    "system": "Water/Isopentylacetate p459 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1090,
+    "a12_cal_mol": 725.1364,
+    "a21_cal_mol": 858.8268,
+    "alpha": 0.0,
+    "system": "Water/Acetophenone p460 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 1748,
+    "a12_cal_mol": 11675.1604,
+    "a21_cal_mol": -3887.1802,
+    "alpha": 0.0902,
+    "system": "Water/Quinoline p464 1/1a"
+  },
+  {
+    "id1": 1921,
+    "id2": 510,
+    "a12_cal_mol": 2986.1161,
+    "a21_cal_mol": -84.8485,
+    "alpha": 0.086,
+    "system": "Water/Isopropylbenzene p465 1/1a"
+  },
+  {
+    "id1": 1938,
+    "id2": 501,
+    "a12_cal_mol": 161.2943,
+    "a21_cal_mol": 431.5524,
+    "alpha": 0.3,
+    "system": "8 CarbonDisulfide/Benzene p90 1/7"
+  },
+  {
+    "id1": 1938,
+    "id2": 502,
+    "a12_cal_mol": -591.6879,
+    "a21_cal_mol": 1052.858,
+    "alpha": 0.243,
+    "system": "9 CarbonDisulfide/Toluene p356 1/7"
+  },
+  {
+    "id1": 2640,
+    "id2": 1101,
+    "a12_cal_mol": 9870.353,
+    "a21_cal_mol": -6982.8569,
+    "alpha": 0.0187,
+    "system": "Halothane/Methanol p33 1/2c"
+  },
+  {
+    "id1": 2655,
+    "id2": 501,
+    "a12_cal_mol": -53.1528,
+    "a21_cal_mol": 551.963,
+    "alpha": 0.301,
+    "system": "3 1.1.2-Trichloro-1.2.2-Trifluoroethane/Benzene p111 1/7"
+  },
+  {
+    "id1": 2793,
+    "id2": 502,
+    "a12_cal_mol": -167.8974,
+    "a21_cal_mol": 104.6027,
+    "alpha": 0.302,
+    "system": "9 MethylIsocyanate/Toluene p376 1/7"
+  },
+  {
+    "id1": 2851,
+    "id2": 1101,
+    "a12_cal_mol": 617.5847,
+    "a21_cal_mol": -153.4695,
+    "alpha": 0.3003,
+    "system": "Methanol/Formamide p30 1/2c"
+  }
+]

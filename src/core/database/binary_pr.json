@@ -1,0 +1,259 @@
+{
+  "Metano (C1)": {
+    "Etano (C2)": -0.0033,
+    "Propano (C3)": 0.021,
+    "Isobutano (iC4)": 0.0256,
+    "n-Butano (nC4)": 0.0185,
+    "Isopentano (iC5)": -0.0056,
+    "n-Pentano (nC5)": 0.023,
+    "n-Hexano (nC6)": 0.04,
+    "n-Heptano (nC7)": 0.0401,
+    "n-Octano (nC8)": 0.0496,
+    "n-Nonano (nC9)": 0.0474,
+    "n-Decano (nC10)": 0.0411,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.0885,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.1356,
+    "Benzeno": 0.0807,
+    "Tolueno": 0.097,
+    "m-Xileno": 0.0844
+  },
+  "Etano (C2)": {
+    "Metano (C1)": -0.0033,
+    "Propano (C3)": 0.0011,
+    "Isobutano (iC4)": -0.0067,
+    "n-Butano (nC4)": 0.0089,
+    "n-Pentano (nC5)": 0.0078,
+    "n-Hexano (nC6)": -0.04,
+    "n-Heptano (nC7)": 0.0074,
+    "n-Octano (nC8)": 0.0185,
+    "n-Decano (nC10)": 0.0144,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.13,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.0952,
+    "Benzeno": 0.0322,
+    "Metanol": 0.027
+  },
+  "Propano (C3)": {
+    "Metano (C1)": 0.021,
+    "Etano (C2)": 0.0011,
+    "Isobutano (iC4)": -0.0078,
+    "n-Butano (nC4)": 0.0033,
+    "Isopentano (iC5)": 0.0111,
+    "n-Pentano (nC5)": 0.0267,
+    "n-Hexano (nC6)": 0.0007,
+    "n-Heptano (nC7)": 0.0056,
+    "n-Octano (nC8)": 0.0,
+    "n-Nonano (nC9)": 0.0,
+    "n-Decano (nC10)": 0.0,
+    "\u00c1gua (H2O)": 0.5,
+    "Benzeno": 0.0233
+  },
+  "Isobutano (iC4)": {
+    "Metano (C1)": 0.0256,
+    "Etano (C2)": -0.0067,
+    "Propano (C3)": -0.0078,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.13,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.0474
+  },
+  "n-Butano (nC4)": {
+    "Metano (C1)": 0.0185,
+    "Etano (C2)": 0.0089,
+    "Propano (C3)": 0.0033,
+    "n-Pentano (nC5)": 0.0174,
+    "n-Hexano (nC6)": -0.0056,
+    "n-Heptano (nC7)": 0.0033,
+    "n-Octano (nC8)": 0.0074,
+    "n-Decano (nC10)": 0.0078,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.1352
+  },
+  "Isopentano (iC5)": {
+    "Metano (C1)": -0.0056,
+    "Propano (C3)": 0.0111,
+    "n-Pentano (nC5)": 0.06,
+    "Nitrog\u00eanio (N2)": 0.0922,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.1219
+  },
+  "n-Pentano (nC5)": {
+    "Metano (C1)": 0.023,
+    "Etano (C2)": 0.0078,
+    "Propano (C3)": 0.0267,
+    "n-Butano (nC4)": 0.0174,
+    "Isopentano (iC5)": 0.06,
+    "n-Heptano (nC7)": 0.0074,
+    "Nitrog\u00eanio (N2)": 0.1,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.1252,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.063,
+    "Benzeno": 0.0189
+  },
+  "n-Hexano (nC6)": {
+    "Metano (C1)": 0.04,
+    "Etano (C2)": -0.04,
+    "Propano (C3)": 0.0007,
+    "n-Butano (nC4)": -0.0056,
+    "Nitrog\u00eanio (N2)": 0.1496,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.11,
+    "Benzeno": 0.008
+  },
+  "n-Heptano (nC7)": {
+    "Metano (C1)": 0.0401,
+    "Etano (C2)": 0.0074,
+    "Propano (C3)": 0.0056,
+    "n-Butano (nC4)": 0.0033,
+    "n-Pentano (nC5)": 0.0074,
+    "n-Hexano (nC6)": -0.0078,
+    "Nitrog\u00eanio (N2)": 0.1441,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.1,
+    "Benzeno": 0.0011
+  },
+  "n-Octano (nC8)": {
+    "Metano (C1)": 0.0496,
+    "Etano (C2)": 0.0185,
+    "Propano (C3)": 0.0,
+    "n-Butano (nC4)": 0.0074,
+    "n-Pentano (nC5)": 0.0,
+    "Nitrog\u00eanio (N2)": -0.4,
+    "\u00c1gua (H2O)": 0.5,
+    "Benzeno": 0.003
+  },
+  "n-Nonano (nC9)": {
+    "Metano (C1)": 0.0474,
+    "Propano (C3)": 0.0,
+    "\u00c1gua (H2O)": 0.5
+  },
+  "n-Decano (nC10)": {
+    "Metano (C1)": 0.0411,
+    "Etano (C2)": 0.0144,
+    "Propano (C3)": 0.0,
+    "n-Butano (nC4)": 0.0078,
+    "Nitrog\u00eanio (N2)": 0.1122,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.1141,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.0333
+  },
+  "Oxig\u00eanio (O2)": {
+    "Nitrog\u00eanio (N2)": -0.0133
+  },
+  "Nitrog\u00eanio (N2)": {
+    "Isopentano (iC5)": 0.0922,
+    "n-Pentano (nC5)": 0.1,
+    "n-Hexano (nC6)": 0.1496,
+    "n-Heptano (nC7)": 0.1441,
+    "n-Octano (nC8)": -0.4,
+    "n-Decano (nC10)": 0.1122,
+    "Oxig\u00eanio (O2)": -0.0133,
+    "\u00c1gua (H2O)": -0.0193,
+    "Di\u00f3xido de Carbono (CO2)": 0.1652,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.1641
+  },
+  "\u00c1gua (H2O)": {
+    "Metano (C1)": 0.5,
+    "Etano (C2)": 0.5,
+    "Propano (C3)": 0.5,
+    "Isobutano (iC4)": 0.5,
+    "n-Butano (nC4)": 0.5,
+    "Isopentano (iC5)": 0.5,
+    "n-Pentano (nC5)": 0.5,
+    "n-Hexano (nC6)": 0.5,
+    "n-Heptano (nC7)": 0.5,
+    "n-Octano (nC8)": 0.5,
+    "n-Nonano (nC9)": 0.5,
+    "n-Decano (nC10)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.0952,
+    "Sulfeto de Hidrog\u00eanio (H2S)": 0.0096,
+    "Benzeno": 0.5,
+    "Tolueno": 0.5,
+    "o-Xileno": 0.5,
+    "m-Xileno": 0.5,
+    "p-Xileno": 0.5,
+    "Etilbenzeno": 0.5,
+    "Metanol": -0.0778,
+    "Ciclopropano": 0.5
+  },
+  "Di\u00f3xido de Carbono (CO2)": {
+    "Metano (C1)": 0.0885,
+    "Etano (C2)": 0.13,
+    "Isobutano (iC4)": 0.13,
+    "n-Butano (nC4)": 0.1352,
+    "Isopentano (iC5)": 0.1219,
+    "n-Pentano (nC5)": 0.1252,
+    "n-Hexano (nC6)": 0.11,
+    "n-Heptano (nC7)": 0.1,
+    "n-Decano (nC10)": 0.1141,
+    "Nitrog\u00eanio (N2)": 0.1652,
+    "\u00c1gua (H2O)": 0.0952,
+    "Benzeno": 0.0774,
+    "Tolueno": 0.1056,
+    "Metanol": 0.022
+  },
+  "Sulfeto de Hidrog\u00eanio (H2S)": {
+    "Metano (C1)": 0.1356,
+    "Etano (C2)": 0.0952,
+    "Isobutano (iC4)": 0.0474,
+    "n-Pentano (nC5)": 0.063,
+    "n-Decano (nC10)": 0.0333,
+    "Nitrog\u00eanio (N2)": 0.1641,
+    "\u00c1gua (H2O)": 0.0096
+  },
+  "Benzeno": {
+    "Metano (C1)": 0.0807,
+    "Etano (C2)": 0.0322,
+    "Propano (C3)": 0.0233,
+    "n-Pentano (nC5)": 0.0189,
+    "n-Hexano (nC6)": 0.008,
+    "n-Heptano (nC7)": 0.0011,
+    "n-Octano (nC8)": 0.003,
+    "Nitrog\u00eanio (N2)": 0.1641,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.0774
+  },
+  "Tolueno": {
+    "Metano (C1)": 0.097,
+    "\u00c1gua (H2O)": 0.5,
+    "Di\u00f3xido de Carbono (CO2)": 0.1056
+  },
+  "o-Xileno": {
+    "\u00c1gua (H2O)": 0.5
+  },
+  "m-Xileno": {
+    "Metano (C1)": 0.0844,
+    "\u00c1gua (H2O)": 0.5
+  },
+  "p-Xileno": {
+    "\u00c1gua (H2O)": 0.5
+  },
+  "Etilbenzeno": {
+    "\u00c1gua (H2O)": 0.5
+  },
+  "Fenol": {},
+  "Glicerol": {},
+  "Metanol": {
+    "Etano (C2)": 0.027,
+    "\u00c1gua (H2O)": -0.0778,
+    "Di\u00f3xido de Carbono (CO2)": 0.022
+  },
+  "Etanol": {
+    "Propano (C3)": 0.0315
+  },
+  "2-Propanol": {
+    "n-Hexano (nC6)": 0.0844
+  },
+  "1-Pentanol": {},
+  "1-Hexanol": {},
+  "2-Heptanol": {},
+  "1-Octanol": {},
+  "1-Decanol": {},
+  "3-metil-1-butanol": {},
+  "1.2-propanodiol": {},
+  "Metiletilcetona": {},
+  "Etilenoglicol": {},
+  "Ciclopropano": {
+    "\u00c1gua (H2O)": 0.5
+  }
+}

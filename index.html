@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualcheme - Interactive Chemical Engineering Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="brand-container">
+          <span class="brand-title">Visualcheme</span>
+          <span class="brand-badge">DECHEMA / DIPPR Core</span>
+        </div>
+
+        <nav class="unit-nav" id="unit-nav-tabs">
+          <button class="unit-tab active" data-unit="pipe_flow">Conduit & Pipe Flow</button>
+        </nav>
+
+        <div class="header-actions">
+          <select id="preset-select" class="preset-select">
+            <option value="">-- Quick Presets --</option>
+            <option value="pipe_default">Turbulent Water (Re ≈ 83,000)</option>
+            <option value="pipe_laminar">Laminar Glycol (Re ≈ 330)</option>
+            <option value="pipe_throttled">Severe Valve Throttling (85% Shut)</option>
+            <option value="pipe_cast_iron">High-Roughness Cast Iron Pipe</option>
+            <option value="pipe_towler_20_1">Towler Example 20.1 (25 mm, 120 m)</option>
+            <option value="pipe_uphill">Uphill Line: Pressure Drop ≠ Head Loss</option>
+            <option value="pipe_flashing">Hot Acetone Throttled: Flashing</option>
+          </select>
+          <button id="btn-reset" class="btn-icon" title="Reset to Defaults">↺ Reset</button>
+        </div>
+      </header>
+
+      <!-- Central User Property Selector (Heatmap Gradient Switcher) -->
+      <section class="property-bar-container" id="property-bar"></section>
+
+      <!-- Main Dashboard Grid -->
+      <main class="dashboard-grid">
+        <!-- Left Column: Interactive Equipment Controls & Sliders -->
+        <aside class="hud-card left-panel">
+          <div class="card-title">
+            <span>Equipment Controls</span>
+            <span style="font-size:0.7rem;color:var(--accent-sky);text-transform:none;">Sub-1ms Reactivity</span>
+          </div>
+          <div class="controls-container" id="controls-container"></div>
+        </aside>
+
+        <!-- Center Column: 60 FPS Visual Physics Stage & Real-time Metrics -->
+        <section class="center-stage">
+          <!-- Real-Time KPI HUD Cards -->
+          <div class="metrics-strip" id="metrics-strip"></div>
+
+          <!-- Model Validity Diagnostics -->
+          <div class="warnings-strip" id="warnings-strip" hidden></div>
+
+          <!-- Uniform Bulk Fluid & Transport Properties Bar -->
+          <div class="fluid-state-bar" id="fluid-state-bar"></div>
+
+          <!-- 2D Fluid Simulation Canvas -->
+          <div class="canvas-viewport" id="canvas-container">
+            <canvas id="simulation-canvas"></canvas>
+            <div class="canvas-hud-overlay" id="canvas-hud-overlay">
+              <span id="overlay-unit-title">Conduit Flow</span> | <span id="overlay-regime">TURBULENT</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Column: Synchronized Diagnostic Engineering Charts -->
+        <aside class="hud-card right-panel">
+          <div class="card-title">
+            <span>Diagnostic Charts</span>
+            <span style="font-size:0.7rem;color:var(--text-muted);text-transform:none;">Synchronized</span>
+          </div>
+          <div class="charts-container">
+            <div class="chart-wrapper" id="spatial-chart-wrapper"></div>
+            <div class="chart-wrapper" id="diagram-chart-wrapper"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

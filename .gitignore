@@ -1,0 +1,27 @@
+# Dependencies & build
+node_modules/
+dist/
+*.local
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Large local reference (not required to run the app)
+Chemical Engineering Design, Principles, Second Edition.pdf
