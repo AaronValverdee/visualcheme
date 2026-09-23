@@ -153,6 +153,16 @@ visualcheme/
 * **Node.js** (v18+ recommended)
 * **npm** (v9+)
 
+### Publish to GitHub & GitHub Pages
+The repo includes a workflow that builds and deploys to **GitHub Pages** on every push to `main`.
+
+1. Install [GitHub CLI](https://cli.github.com/) and sign in: `gh auth login`
+2. From the project root: `powershell -ExecutionPolicy Bypass -File scripts/publish-github.ps1`
+
+If the repository name is not `visualcheme`, update `BASE_PATH` in `.github/workflows/deploy-pages.yml` to `/your-repo-name/`.
+
+Live URL pattern: `https://<your-github-username>.github.io/visualcheme/`
+
 ### Physics Validation Suite
 ```bash
 # Properties vs NIST/Perry's data, friction vs Colebrook/Moody, pipe model vs
