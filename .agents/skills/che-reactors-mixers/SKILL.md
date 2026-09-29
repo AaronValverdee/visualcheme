@@ -1,250 +1,222 @@
 ---
 name: che-reactors-mixers
 description: >-
-  Chemical engineering guide to reactor design (CSTR, PFR, Batch, Catalytic Packed Bed)
-  and fluid mixing/agitation equipment (impeller selection, power number curves N_p vs Re,
-  baffle sizing, blending time, and jacket/coil heat transfer). Use when modeling, designing,
-  or visualizing chemical reactors and mixing units in Visualcheme.
+  Master chemical engineering skill for reactor sizing and mixing equipment design
+  from Chapter 15 of Towler & Sinnott: CSTR, PFR, Batch models, reaction kinetics,
+  stirred tank geometries, baffle sizing, impeller selection (marine propeller, Rushton turbine,
+  pitched blade, anchor), power curves (Np vs Re), blending time, and vessel heating/cooling
+  (jackets, internal coils, catalytic fixed beds) for Visualcheme.
 ---
 
 # Design of Chemical Reactors and Mixers
 
-This skill provides an authoritative, detailed, textbook-grounded reference on reactor sizing, chemical kinetics, agitator selection, mixing hydrodynamics, impeller power draw, and reactor heat transfer, based directly on Chapter 15 of *Chemical Engineering Design* (Towler & Sinnott, 2nd Edition, pp. 640–758).
+This skill provides an authoritative, textbook-grounded reference on chemical reactor sizing, reaction kinetics, stirred vessel mixing, power consumption curves, and thermal management, based directly on Chapter 15 of *Chemical Engineering Design* (Towler & Sinnott, 2nd Edition, pp. 640–758).
 
 ---
 
 ## 1. Reactor Types & Performance Equations
 
-A chemical reactor transforms raw materials into desired products via chemical synthesis. Reactor selection balances reaction selectivity, conversion, heat removal, residence time, and capital cost.
+Chemical reactors convert chemical feedstocks into products. Reactor selection depends on phase, reaction kinetics, production scale, and heat transfer requirements.
 
-![Reactor Design Procedure](images/fig_15_1.png)
+![Reactor Design General Procedure](images/fig_15_1.png)
 
 ### 1.1 The Classical Ideal Reactor Models
 
-#### 1.1.1 Batch Reactor
-Unsteady-state operation where reactants are charged, reacted over time, and discharged.
-* **Component Balance on Limiting Reactant $A$**:
-  $$-\frac{d N_A}{dt} = (-r_A) V$$
+```mermaid
+graph LR
+    A["Ideal Reactor Models"] --> B["Batch Reactor<br/>• Unsteady-state<br/>• Uniform composition<br/>• Fine chemicals & pharma"]
+    A --> C["Continuous Stirred Tank (CSTR)<br/>• Steady-state<br/>• Complete backmixing<br/>• Outlet = Reactor composition"]
+    A --> D["Plug Flow Reactor (PFR)<br/>• Steady-state tubular<br/>• No axial mixing<br/>• Composition profiles along length"]
+```
+
+#### 1.1.1 Batch Reactor Sizing (Equation 15.1)
+Operates unsteadily with uniform spatial composition. The time $t_r$ required to reach fractional conversion $X_A$ of limiting reactant $A$:
 
 ![Equation 15.1](images/eq_15_1.png)
 
-* **Reaction Residence Time ($t_R$)**:
-  $$t_R = N_{A0} \int_0^{X_A} \frac{dX_A}{(-r_A) V}$$
-* **Total Batch Cycle Time**:
-  $$t_{cycle} = t_{charge} + t_{heat} + t_R + t_{cool} + t_{discharge} + t_{clean}$$
-* **Best Used For**: Specialty chemicals, pharmaceuticals, multi-product campaigns, low production rates ($< 5000\text{ metric tons/year}$).
+$$t_r = N_{A0} \int_0^{X_A} \frac{d X_A}{(-r_A) V}$$
+$$\text{For constant volume liquid systems:}$$
+$$t_r = C_{A0} \int_0^{X_A} \frac{d X_A}{(-r_A)}$$
+* Total batch cycle time: $t_{cycle} = t_r + t_{charge} + t_{heat} + t_{discharge} + t_{clean}$.
 
-#### 1.1.2 Continuous Stirred-Tank Reactor (CSTR / Backmix Reactor)
-Steady-state continuous flow in an intensely agitated vessel where the internal contents are spatially uniform and identical to the exit stream.
-
-![Equation 15.2](images/eq_15_2.png)
+#### 1.1.2 Continuous Stirred Tank Reactor (CSTR) Sizing (Equation 15.3)
+Assumes instantaneous, perfect fluid micromixing. The composition in the exit stream is identical to the fluid throughout the vessel:
 
 ![Equation 15.3](images/eq_15_3.png)
 
-* **Design Equation**:
-  $$V = \frac{F_{A0} X_A}{(-r_A)_{exit}} = \frac{v_0 (C_{A0} - C_A)}{(-r_A)_{exit}}$$
-* **Space Time ($\tau$)**:
-  $$\tau = \frac{V}{v_0} = \frac{C_{A0} X_A}{(-r_A)_{exit}}$$
-* **Damköhler Number ($Da$)** (for first-order reaction $-r_A = k C_A$):
-  $$Da = k \tau \implies X_A = \frac{Da}{1 + Da}, \quad C_A = \frac{C_{A0}}{1 + Da}$$
-* **Characteristics**: Operates at the lowest reactant concentration (exit concentration) and therefore the lowest reaction rate; requires larger volume than a PFR for positive-order reactions, but provides excellent temperature control for highly exothermic reactions.
+$$V_r = \frac{F_{A0} X_A}{(-r_A)_{exit}} = \frac{\dot{V} C_{A0} X_A}{(-r_A)_{exit}}$$
+$$\text{Residence Time ($\tau$):}$$
+$$\tau = \frac{V_r}{\dot{V}} = \frac{C_{A0} X_A}{(-r_A)_{exit}}$$
+* Because the reaction rate is evaluated at the lowest concentration (the exit conversion), a CSTR requires a substantially larger volume than a PFR for positive-order kinetics ($n > 0$).
+* Operating CSTRs in a cascade of $N$ tanks in series dramatically reduces total volume, approaching PFR performance as $N \to \infty$.
 
-#### 1.1.3 Plug Flow Reactor (PFR / Tubular Reactor)
-Steady-state continuous flow through a tube or conduit with zero axial backmixing (flat velocity profile).
-
-![Equation 15.4](images/eq_15_4.png)
+#### 1.1.3 Plug Flow Reactor (PFR) Sizing (Equation 15.5)
+Fluids move through a cylindrical tube as a continuous plug with zero axial backmixing but perfect radial uniformity:
 
 ![Equation 15.5](images/eq_15_5.png)
 
-![Equation 15.6](images/eq_15_6.png)
-
-* **Differential Material Balance**:
-  $$F_{A0} dX_A = (-r_A) dV$$
-* **Design Equation**:
-  $$V = F_{A0} \int_0^{X_A} \frac{dX_A}{-r_A}$$
-* **Space Time ($\tau$) for 1st-Order Reaction**:
-  $$\tau = \int_0^{X_A} \frac{C_{A0} dX_A}{k C_{A0} (1 - X_A)} = \frac{1}{k} \ln\left(\frac{1}{1 - X_A}\right)$$
-  $$X_A = 1 - e^{-k \tau} = 1 - e^{-Da}$$
-* **Comparison**: A PFR always requires less volume than a CSTR for identical conversion and positive reaction order because the reaction rate remains high near the inlet.
+$$V_r = F_{A0} \int_0^{X_A} \frac{d X_A}{(-r_A)}$$
+$$\text{Space Time ($\tau$):}$$
+$$\tau = \frac{V_r}{\dot{V}_0} = C_{A0} \int_0^{X_A} \frac{d X_A}{(-r_A)}$$
 
 ---
 
-## 2. Chemical Kinetics & Temperature Dependence
+## 2. Chemical Kinetics & Damköhler Numbers
 
-### 2.1 Reaction Rate Formulations
+### 2.1 Rate Formulations & Temperature Dependence
+The rate of reaction $(-r_A)$ per unit fluid volume is given by power-law kinetics:
+$$(-r_A) = k(T) C_A^a C_B^b$$
 
-![Equation 15.7](images/eq_15_7.png)
+The temperature dependence of the reaction rate constant $k(T)$ follows the **Arrhenius equation** (Equation 15.11):
 
-![Equation 15.8](images/eq_15_8.png)
+![Equation 15.11](images/eq_15_11.png)
 
-For a general homogeneous reaction $aA + bB \rightarrow cC + dD$:
-$$-r_A = k(T) C_A^\alpha C_B^\beta$$
+$$k = A \exp\left( -\frac{E_a}{R T} \right)$$
+$$\text{Where:}$$
+* $A$ = Pre-exponential frequency factor
+* $E_a$ = Activation energy ($\text{J/mol}$)
+* $R$ = Universal gas constant ($8.314\text{ J/mol}\cdot\text{K}$)
+* $T$ = Absolute temperature ($\text{K}$)
 
-### 2.2 Arrhenius Temperature Dependence
-The reaction rate constant $k(T)$ increases exponentially with absolute temperature:
-
-![Equation 15.9](images/eq_15_9.png)
-
-![Equation 15.10](images/eq_15_10.png)
-
-$$k(T) = A \exp\left( -\frac{E_a}{R T} \right)$$
-where $A$ is the pre-exponential frequency factor, $E_a$ is activation energy ($\text{J/mol}$), and $R = 8.314\text{ J/mol}\cdot\text{K}$.
-* **Rule of Thumb**: For reactions with typical activation energies ($E_a \approx 50 - 80\text{ kJ/mol}$), reaction rate approximately doubles for every $10^\circ\text{C}$ rise in temperature.
+### 2.2 Damköhler Number ($Da$)
+The ratio of characteristic chemical reaction rate to fluid transport rate:
+* For a first-order reaction in a CSTR:
+  $$Da = k \tau = \frac{X_A}{1 - X_A}$$
+* For $Da \ll 1$, conversion is low; the system is reaction-rate limited.
+* For $Da \gg 1$, conversion approaches completion; mixing or heat transfer becomes rate-limiting.
 
 ---
 
 ## 3. Mixing and Agitation in Stirred Vessels
 
-Agitation promotes mass and heat transfer, blends miscible liquids, suspends solids, and disperses immiscible phases.
+Agitation promotes fluid homogenization, suspends solid catalyst particles, disperses gas bubbles, and enhances heat transfer coefficients to vessel walls and cooling coils.
 
-![Standard Agitated Tank Geometry](images/fig_15_7.png)
+![Stirred Tank Dimensions](images/fig_15_7.png)
 
-### 3.1 Standard Vessel Geometry Proportions
-For a standard vertical cylindrical vessel with torispherical or 2:1 elliptical dished heads:
-* Liquid height: $H_L = D_t$ (liquid depth equal to tank diameter).
-* Impeller diameter: $D = \frac{1}{3} D_t$ to $\frac{1}{2} D_t$.
-* Impeller off-bottom clearance: $C = \frac{1}{3} D_t$.
-* Baffle width: $W = \frac{1}{10} D_t$ to $\frac{1}{12} D_t$ (standard: 4 equally spaced vertical wall baffles).
-* Baffle clearance from wall: $0.15 W$ to prevent solids accumulation in dead zones.
+### 3.1 Standard Vessel Geometry Proportions (Towler & Sinnott, Section 15.5)
+For a standard cylindrical dished-end vessel of diameter $D_T$:
+* **Liquid Level**: $Z_L = D_T$ (Aspect ratio $H/D_T = 1.0 - 1.25$)
+* **Impeller Diameter ($D$)**:
+  * High-speed turbine / propeller: $D = D_T / 3$ ($0.3 - 0.5\ D_T$)
+  * Low-speed anchor / helical ribbon: $D = 0.90 - 0.98\ D_T$
+* **Impeller Off-Bottom Clearance ($C$)**: $C = D_T / 3$
+* **Baffle Proportions**: 4 standard full-length vertical baffles mounted at $90^\circ$ around vessel periphery:
+  * Baffle width: $W = D_T / 10$ to $D_T / 12$
+  * Wall clearance: $W_{clear} = D_T / 50$ (prevents stagnant solids buildup behind baffles).
+  * *Baffle Function*: Baffles transform bulk rotational swirl (which causes a deep central surface vortex that starves impellers of liquid) into vertical recirculating loops that promote intense micro-turbulence and bulk fluid turnover.
 
-### 3.2 Impeller Types & Hydrodynamic Regimes
+---
 
-![Impeller Types](images/fig_15_8.png)
+### 3.2 Impeller Selection (Figures 15.12, 15.13, 15.14)
+Impeller selection depends primarily on fluid dynamic viscosity and process duty:
 
-![Flow Patterns and Vortexing](images/fig_15_9.png)
+![Basic Impeller Types](images/fig_15_12.png)
+
+![Low Speed Agitators](images/fig_15_13.png)
+
+![Agitator Selection Guide](images/fig_15_14.png)
 
 1. **Marine Propeller (Axial Flow)**:
-   * 3 blades with helical pitch; operates at high rotational speeds ($400 - 1750\text{ rpm}$).
-   * Best for low-viscosity liquid blending ($\mu < 2\text{ Pa}\cdot\text{s}$) and rapid suspension of light solids.
-2. **Flat-Blade Rushton Turbine (Radial Flow)**:
-   * 6 vertical flat blades on a central disk ($D/D_t \approx 0.33$).
-   * Discharges fluid radially outwards toward vessel walls where it splits into two circulation loops.
-   * Provides very high shear rates; industry benchmark for gas-liquid dispersion (fermenters, oxygenators) and liquid-liquid emulsions.
-3. **Pitched-Blade Turbine (Mixed Flow - $45^\circ$)**:
-   * 4 or 6 blades angled at $45^\circ$. Combines axial pumping with moderate radial shear.
-   * General-purpose workhorse for blending, solids suspension, and chemical reaction with moderate viscosity ($\mu < 10\text{ Pa}\cdot\text{s}$).
-4. **Anchor & Helical Ribbon (Laminar Close-Clearance)**:
-   * Operates at low rotational speeds ($10 - 50\text{ rpm}$) with close clearance to vessel wall ($c \approx 0.01 D_t$).
-   * Essential for high-viscosity liquids ($\mu > 50\text{ Pa}\cdot\text{s}$), polymerizations, and pastes; scrapes the heated/cooled vessel wall to prevent product degradation.
+   * 3 curved blades, high speed ($400 - 1750\text{ rpm}$).
+   * Generates strong axial downward jet for blending low-viscosity miscible liquids ($\mu < 2000\text{ mPa}\cdot\text{s}$).
+2. **Flat-Blade Disc Turbine (Rushton Turbine, Radial Flow)**:
+   * 6 flat vertical blades mounted on a central horizontal disc ($D = D_T / 3$).
+   * Discharges fluid radially outward toward vessel wall. Produces extreme shear stresses at blade tips; standard choice for **gas-liquid dispersion (sparging)** and liquid-liquid emulsification.
+3. **Pitched-Blade Turbine (PBT, Mixed Flow)**:
+   * 4 or 6 blades inclined at $45^\circ$.
+   * Produces both axial and radial flow at lower shear and lower power than Rushton turbine. Excellent for **solid particle suspension**.
+4. **Anchor & Helical Ribbon Agitators (High-Viscosity Laminar Flow)**:
+   * Close vessel wall clearance ($10 - 25\text{ mm}$) to scrape boundary layer fluids.
+   * Required for non-Newtonian polymers and heavy pastes ($\mu > 20,000\text{ to } 1,000,000\text{ mPa}\cdot\text{s}$).
 
-### 3.3 Agitator Power Consumption Equations
-The mechanical shaft power $P$ consumed by an impeller rotating at speed $N$ (rev/s) is calculated via dimensionless analysis:
+---
 
-![Equation 15.11](images/eq_15_11.png)
+### 3.3 Agitator Power Consumption Formulations
+
+#### 3.3.1 Agitation Reynolds Number ($Re_m$) (Equation 15.12)
+Flow regime in a stirred tank is governed by the rotational Reynolds number:
 
 ![Equation 15.12](images/eq_15_12.png)
 
-![Equation 15.13](images/eq_15_13.png)
+$$Re_m = \frac{\rho N D^2}{\mu}$$
+$$\text{Where:}$$
+* $N$ = Impeller rotational speed ($\text{rev/s}$ or $\text{rps}$)
+* $D$ = Impeller diameter ($\text{m}$)
+* $\rho$ = Liquid density ($\text{kg/m}^3$)
+* $\mu$ = Dynamic viscosity ($\text{Pa}\cdot\text{s}$)
+* *Regimes*: Laminar ($Re_m < 10$); Transition ($10 < Re_m < 10,000$); Fully Turbulent ($Re_m > 10,000$).
 
-* **Impeller Reynolds Number**:
-  $$Re_I = \frac{\rho N D^2}{\mu}$$
-* **Power Number**:
-  $$N_P = \frac{P}{\rho N^3 D^5}$$
-* **Froude Number** (relevant only in unbaffled tanks with free surface vortexing):
-  $$Fr = \frac{N^2 D}{g}$$
-
-![Power Number vs Reynolds Number Curves](images/fig_15_11.png)
-
-#### 3.3.1 Power Regimes in Baffled Tanks
-1. **Laminar Regime ($Re_I < 10$)**:
-   $$N_P = \frac{K_L}{Re_I} \implies P = K_L \mu N^2 D^3$$
-   * Power is directly proportional to fluid viscosity $\mu$ and completely independent of density $\rho$.
-2. **Turbulent Regime ($Re_I > 10^4$ in baffled tanks)**:
-   $$N_P = K_T = \text{constant} \implies P = K_T \rho N^3 D^5$$
-   * Power is independent of viscosity $\mu$ and proportional to fluid density $\rho$ and rotational speed cubed ($N^3$).
-   * Standard values of $K_T$:
-     * Flat-blade Rushton turbine: $K_T \approx 5.0 - 6.0$
-     * 4-blade $45^\circ$ pitched turbine: $K_T \approx 1.27$
-     * Marine propeller (pitch ratio 1.0): $K_T \approx 0.32$
-
-### 3.4 Blend Time Correlations
+#### 3.3.2 Power Number ($N_P$) Definition (Equation 15.14)
+The dimensionless power number is defined as:
 
 ![Equation 15.14](images/eq_15_14.png)
 
-![Equation 15.15](images/eq_15_15.png)
+$$N_P = \frac{P}{\rho N^3 D^5}$$
+Rearranging to calculate mechanical shaft power:
+$$P = N_P \cdot \rho N^3 D^5$$
 
-![Equation 15.16](images/eq_15_16.png)
+#### 3.3.3 Power Correlation Curves (Figures 15.15 and 15.16)
+In fully turbulent baffled flow ($Re_m > 10,000$), $N_P$ becomes completely independent of Reynolds number ($N_P = \text{constant}$):
 
-The time $\theta_b$ required to achieve 95% composition homogeneity:
-$$N \theta_b = \frac{5.9 \left(D_t / D\right)^2}{N_P^{1/3}}$$
-In the turbulent regime ($Re_I > 10^4$), the product $N \theta_b$ is constant for a given tank geometry.
+![Power Correlations for Marine Propellers](images/fig_15_15.png)
 
----
+![Power Correlations for Baffled Turbines](images/fig_15_16.png)
 
-## 4. Heat Transfer in Stirred Chemical Reactors
-
-Exothermic reactions release heat $\Delta H_{rxn} < 0$. If heat generation exceeds heat removal, **thermal runaway** occurs.
-
-![Reactor Cooling Jackets and Coils](images/fig_15_17.png)
-
-### 4.1 Heat Transfer Surfaces
-1. **External Jackets**:
-   * Plain jackets, dimpled jackets, or half-pipe coil jackets welded to the vessel shell.
-   * Maximum heat transfer area is limited to the wetted vessel wall:
-     $$A_{jacket} = \pi D_t H_L + \frac{\pi}{4} D_t^2$$
-   * **Scale-Up Bottleneck**: As reactor volume scales up ($V \propto D_t^3$), surface area scales only as $A \propto D_t^2$. The specific surface area decreases ($A/V \propto 1/D_t$), making jacket cooling alone insufficient for large exothermic reactors ($V > 10 - 15\text{ m}^3$).
-2. **Internal Coils**:
-   * Helical pipe coils immersed inside the liquid provide high heat transfer area and high inside heat transfer coefficients ($U = 400 - 800\text{ W}/\text{m}^2\cdot\text{K}$).
-3. **External Heat Exchanger Loop**:
-   * Reaction mixture is pumped through an external shell-and-tube or plate heat exchanger and returned to the reactor.
-
-### 4.2 Vessel Film Heat Transfer Coefficients
-
-![Equation 15.17](images/eq_15_17.png)
-
-![Equation 15.18](images/eq_15_18.png)
-
-![Equation 15.19](images/eq_15_19.png)
-
-![Equation 15.20](images/eq_15_20.png)
-
-For agitated vessels, the inside liquid film coefficient $h_i$ is correlated by:
-$$\frac{h_i D_t}{k} = C (Re_I)^a (Pr)^b \left(\frac{\mu}{\mu_w}\right)^c$$
-* For jacketed baffled vessel with flat-blade turbine:
-  $$\frac{h_i D_t}{k} = 0.74 (Re_I)^{0.67} (Pr)^{0.33} \left(\frac{\mu}{\mu_w}\right)^{0.14}$$
-* For internal helical coil:
-  $$\frac{h_c d_o}{k} = 0.17 (Re_I)^{0.67} (Pr)^{0.37} \left(\frac{D}{D_t}\right)^{0.1} \left(\frac{d_o}{D_t}\right)^{0.5} \left(\frac{\mu}{\mu_w}\right)^{0.14}$$
+* **Rushton Turbine (Flat Blade, 4 Baffles)**: $N_P \approx \mathbf{5.0}$ (constant in turbulent regime)
+* **Pitched-Blade Turbine ($45^\circ$, 4 Blades)**: $N_P \approx \mathbf{1.2 - 1.6}$
+* **Marine Propeller (Pitch ratio $p/D = 1.0$)**: $N_P \approx \mathbf{0.32}$
+* In the laminar regime ($Re_m < 10$):
+  $$N_P = \frac{K_L}{Re_m} \implies P = K_L \mu N^2 D^3$$
+  Where $K_L \approx 65$ for Rushton turbine; $K_L \approx 40$ for marine propeller.
 
 ---
 
-## 5. Multiphase & Catalytic Reactors
+## 4. Heating and Cooling of Reacting Systems
 
-![Equation 15.21](images/eq_15_21.png)
+Exothermic reactions require continuous heat removal to prevent runaway temperature excursions.
 
-![Equation 15.22](images/eq_15_22.png)
+![Heating and Cooling Approaches](images/fig_15_20.png)
 
-![Equation 15.23](images/eq_15_23.png)
+### 4.1 Vessel Thermal Jacketing vs Internal Coils
+1. **Conventional Outer Jacket (Figure 15.20a)**:
+   * Annular jacket surrounding lower vessel shell and bottom head.
+   * Simple and cheap, but low coolant velocity produces low heat transfer coefficients ($U \approx 200 - 400\text{ W/m}^2\cdot\text{K}$).
+2. **Half-Pipe Coil & Dimple Jackets**:
+   * Pipe welded in a spiral around vessel exterior.
+   * High coolant fluid velocity increases film coefficient ($U \approx 400 - 800\text{ W/m}^2\cdot\text{K}$); handles high utility pressure ($> 20\text{ bar}$).
+3. **Internal Helical Cooling Coils (Figure 15.20b)**:
+   * Immersed directly in the agitated liquid zone.
+   * Provides very large surface area ($A$) and high external film coefficients ($h \approx 1000 - 2500\text{ W/m}^2\cdot\text{K}$). Disadvantages: occupies reactor volume, difficult to clean, susceptible to vibration fatigue.
+4. **External Pump-Around Loop with Heat Exchanger (Figure 15.20c)**:
+   * Liquid is continuously pumped from reactor through a high-efficiency shell-and-tube or plate exchanger and returned.
+   * Area is not limited by reactor vessel dimensions.
 
-![Equation 15.24](images/eq_15_24.png)
+---
 
-![Equation 15.25](images/eq_15_25.png)
+## 5. Catalytic Fixed-Bed Reactors (Figure 15.25)
 
-![Equation 15.26](images/eq_15_26.png)
-
-![Equation 15.27](images/eq_15_27.png)
-
-![Equation 15.28](images/eq_15_28.png)
-
-![Equation 15.29](images/eq_15_29.png)
-
-![Equation 15.30](images/eq_15_30.png)
-
-![Equation 15.31](images/eq_15_31.png)
-
-![Equation 15.32](images/eq_15_32.png)
-
-![Equation 15.33](images/eq_15_33.png)
-
-![Equation 15.34](images/eq_15_34.png)
-
-### 5.1 Catalytic Fixed Bed Reactors (Ergun Pressure Drop)
-Solid catalyst pellets packed into tubes or beds:
+Heterogeneous gas-solid catalytic reactions (e.g. ammonia synthesis, sulfur oxidation, partial oxidation of hydrocarbons) take place in fixed-bed reactors:
 
 ![Fixed Bed Catalytic Reactor](images/fig_15_25.png)
 
-* **Ergun Equation**:
-  $$\frac{\Delta P}{L} = 150 \frac{(1 - \varepsilon)^2}{\varepsilon^3} \frac{\mu v_0}{d_p^2} + 1.75 \frac{1 - \varepsilon}{\varepsilon^3} \frac{\rho v_0^2}{d_p}$$
-  where $\varepsilon$ is bed void fraction ($0.35 - 0.45$), $d_p$ is equivalent particle diameter, and $v_0$ is superficial gas velocity.
-* **Internal Catalyst Effectiveness Factor ($\eta$)**:
-  $$\eta = \frac{\text{Actual reaction rate}}{\text{Rate if entire interior was exposed to surface conditions}} = \frac{3}{\phi} \left(\frac{1}{\tanh \phi} - \frac{1}{\phi}\right)$$
-  where $\phi$ is the Thiele Modulus ($\phi = R_p \sqrt{k / D_{eff}}$).
+![Catalyst Bed Internal Support](images/fig_15_28.png)
+
+### 5.1 Pressure Drop Across Catalyst Beds (The Ergun Equation)
+Fluid pressure drop through a packed bed of solid catalyst pellets of diameter $d_p$ and void fraction $\varepsilon$ obeys the Ergun formulation:
+
+$$\frac{\Delta P}{L} = 150 \frac{(1 - \varepsilon)^2}{\varepsilon^3} \frac{\mu U}{d_p^2} + 1.75 \frac{1 - \varepsilon}{\varepsilon^3} \frac{\rho U^2}{d_p}$$
+* Typical catalyst bed void fraction: $\varepsilon = 0.35 - 0.42$.
+* High pressure drop represents wasted compressor power and risks crushing fragile catalyst pellets.
+
+---
+
+## 6. Visualcheme Implementation Architecture
+
+1. **State Variables**: Model reactor vessels with volume $V_r$, conversion $X_A$, core temperature $T_r$, jacket temperature $T_j$, heat generation $\dot{Q}_{rxn} = (-r_A) V_r (-\Delta H_r)$, and agitation power $P$.
+2. **Interactive Visualization Gradients**:
+   * *Reaction Rate & Conversion Spatial Profile*: Plot $X(z)$ and $T(z)$ along tubular PFR length.
+   * *Thermal Runaway Stability Phase Plane*: Dynamic plot of Heat Generation ($Q_g \propto e^{-E_a/RT}$) vs Heat Removal ($Q_r = U A (T - T_c)$). Illustrates multiple steady states and ignition thresholds.
+   * *Agitator Velocity Field*: Display rotational velocity vectors showing radial discharge from Rushton turbines and axial loops from marine propellers.
+3. **Preset Scenarios**:
+   * *Exothermic CSTR with Runaway Hazard*: Styrene polymerization, cooling jacket with failsafe interlock.
+   * *Fixed-Bed Catalytic SO2 Converter*: Multi-bed adiabatic reactor with inter-stage gas cooling.

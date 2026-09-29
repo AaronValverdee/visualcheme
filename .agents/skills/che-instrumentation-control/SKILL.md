@@ -1,169 +1,205 @@
 ---
 name: che-instrumentation-control
 description: >-
-  Chemical engineering guide to Piping and Instrumentation Diagrams (P&IDs), process control loops
-  (feedback, cascade, ratio, split-range, feedforward), sensor placement, control valve sizing (Cv),
-  and inherent vs installed valve characteristics. Use when designing dynamic interactive unit controls
-  and instrument overlays in Visualcheme.
+  Chemical engineering guide to Piping and Instrumentation Diagrams (P&IDs) and process
+  control from Chapter 5 of Towler & Sinnott: ISA symbology, feedback, cascade, ratio,
+  override, split-range, feedforward loops, control valve characteristics (Linear, Equal %,
+  Quick Opening), and complete control schemes for distillation columns and reactors in Visualcheme.
 ---
 
-# Instrumentation and Process Control
+# Instrumentation and Process Control (P&ID Symbology & Loop Architecture)
 
-This skill provides an authoritative, detailed, textbook-grounded reference on Piping & Instrumentation Diagrams (P&IDs), control architectures, and control valves, based directly on Chapter 5 of *Chemical Engineering Design* (Towler & Sinnott, 2nd Edition, pp. 262–275).
+This skill provides an authoritative, textbook-grounded reference on Piping and Instrumentation Diagrams (P&IDs), process control architectures, control valve characteristics, and unit control schemes, based directly on Chapter 5 of *Chemical Engineering Design* (Towler & Sinnott, 2nd Edition, pp. 262–285).
 
 ---
 
 ## 1. Piping and Instrumentation Diagram (P&ID) Symbology
 
-The P&ID (also known as the Engineering Flowsheet) is the definitive master document that displays all process equipment, piping, valves, safety relief devices, and instrumentation control loops.
+The P&ID (or Engineering Flowsheet) is the master design blueprint of a chemical plant, illustrating all equipment, piping, valves, sensors, controllers, and safety interlocks.
 
-### 1.1 Instrument Tag Identification (Letter Codes)
-Instrument tags consist of a standard letter combination followed by a loop identification number (e.g., **TIC-101**):
+### 1.1 Instrument Tag Identification (ISA Standard S5.1)
+Instruments are depicted as balloon circles enclosing a alphanumeric identification code:
 
-![Instrument Identification Table](images/tab_5_1.png)
+![Table 5.1 Instrument Letter Codes](images/tab_5_1.png)
 
-* **First Letter (Measured or Initiating Variable)**:
-  * **A**: Analysis (composition, pH, chromatography)
-  * **F**: Flow rate ($m^3/h, kg/s$)
-  * **L**: Level (liquid height or interface)
-  * **P**: Pressure or vacuum
-  * **T**: Temperature
-  * **Pd** or **d/P**: Differential Pressure
-* **Succeeding Letters (Readout or Passive Function)**:
-  * **I**: Indicator (local gauge or screen readout)
-  * **R**: Recorder (trend logger)
-  * **A**: Alarm (e.g., **LAH** = Level Alarm High, **PALL** = Pressure Alarm Low-Low)
-* **Final Letter (Output / Control Function)**:
-  * **C**: Controller (executes feedback PID algorithm)
-  * **T**: Transmitter (measures and transmits $4-20\text{ mA}$ or digital Foundation Fieldbus signal)
-  * **V**: Control Valve
-  * **Y**: Computing relay or signal converter (e.g. I/P converter)
-
-### 1.2 P&ID Instrument & Line Symbols
-
-![P&ID Standard Symbols](images/fig_5_1.png)
-
-![Instrument Line Types](images/fig_5_2.png)
-
-* **Instrument Location Balloon Types**:
-  * Clean circle: Field-mounted instrument (mounted locally on equipment or piping).
-  * Circle with solid horizontal line: Primary control room panel mounted (accessible to operator).
-  * Circle with dashed horizontal line: Mounted behind control board (not normally accessible).
-  * Circle inside a square: Distributed Control System (DCS) or PLC shared display function.
-* **Line Type Identification**:
-  * Heavy solid line: Primary process piping.
-  * Thin solid line: Secondary process or utility piping.
-  * Dashed line: Electrical signal line (standard $4 - 20\text{ mA}$ DC or digital bus).
-  * Line with double diagonal slashes: Pneumatic signal line (standard $0.2 - 1.0\text{ bar}$ / $3 - 15\text{ psig}$).
-  * Line with cross-hatch: Capillary tubing (filled thermal systems).
-
-### 1.3 Valve and Actuator Symbols
-
-![P&ID Valve and Actuator Symbols](images/fig_5_3.png)
-
-* **Actuator Types**:
-  * Diaphragm actuator with spring return (pneumatic).
-  * Piston actuator (high thrust for large pressure drops).
-  * Motor-operated actuator (electric motor for remote isolation).
-  * Manual handwheel.
+#### Standard Letter Decoding:
+* **First Letter (Measured Variable)**:
+  * `F` = Flow rate
+  * `L` = Liquid level
+  * `P` = Pressure
+  * `T` = Temperature
+  * `A` = Analysis (composition, pH, chromatography)
+  * `d` = Differential (e.g. `d P` = Differential pressure)
+* **Subsequent Letters (Modifier & Function)**:
+  * `I` = Indicator (local readout or control room display)
+  * `R` = Recorder (historical data logging)
+  * `C` = Controller (automatic control algorithm)
+  * `T` = Transmitter (converts sensor signal to 4–20 mA or digital bus)
+  * `V` = Control valve (final control element)
+  * `A` = Alarm (`LAH` = Level Alarm High, `LAL` = Level Alarm Low)
+  * `S` = Switch / Solenoid
+* **Examples**:
+  * `TIC-101`: Temperature Indicating Controller (Loop 101)
+  * `FCV-204`: Flow Control Valve (Loop 204)
+  * `PAHH-301`: Pressure Alarm High-High (Safety trip loop 301)
 
 ---
 
-## 2. Basic Process Control Loops
+### 1.2 P&ID Line & Location Symbology (Figure 5.1)
+Lines connecting instrument bubbles represent signal transmission media:
 
-### 2.1 Level Control
-Maintains liquid holdup in vessels, tanks, and column sumps.
+![P&ID Symbology](images/fig_5_1.png)
 
-![Level Control Schemes](images/fig_5_4.png)
-
-* **Scheme (a) (Manipulating Discharge)**: The level controller throttles the bottoms pump discharge valve. Most common; stable.
-* **Scheme (b) (Manipulating Inflow)**: Throttles feed valve upstream to balance vessel level. Used when downstream processing must run at constant rate.
-* **Averaging Level Control**: Wide proportional band ($PB = 100 - 200\%$) and slow reset to absorb surge flow oscillations and provide smooth downstream feed rates.
-
-### 2.2 Pressure Control
-Maintains vapor space pressure to ensure stable equilibrium and structural vessel safety.
-
-![Pressure Control Schemes](images/fig_5_5.png)
-
-* **Vapor Venting / Offgas**: Valve throttles vapor discharge to flare or fuel header.
-* **Condenser Bypass (Hot Vapor Bypass)**: For distillation columns, throttles hot vapor directly around condenser into reflux drum, varying condensation surface and maintaining column pressure.
-* **Inert Gas Blanketing (Split-Range Pressure Control)**: Pad gas ($N_2$) admitted when pressure drops; vent gas released to scrubber when pressure rises.
-
-### 2.3 Temperature Control of Heat Exchangers
-
-![Temperature Control Schemes](images/fig_5_6.png)
-
-![Condensate Throttling Control](images/fig_5_7.png)
-
-* **Throttling Utility Flow (Scheme a)**: Throttles steam or cooling water valve directly based on process outlet temperature. Simple, but large dead time if heat exchanger is large.
-* **Process Bypass Control (Scheme b)**: Mixes hot uncooled process bypass with cold exchanger effluent using a three-way valve. Very fast dynamic response (sub-second).
-* **Condensate Throttling (Fig 5.7)**: For steam heaters, throttling the steam trap/condensate outlet floods tubes with liquid condensate, reducing effective heat transfer area $A$. Lower cost valve, but slower response.
+* **Solid Heavy Line**: Primary process fluid pipeline.
+* **Solid Thin Line**: Secondary / utility pipeline (cooling water, steam, vent).
+* **Double Cross-Hatched Line**: Pneumatic signal line ($3 - 15\text{ psig}$ or $0.2 - 1.0\text{ bar}$).
+* **Dashed Line**: Electric signal ($4 - 20\text{ mA}$ analog or $24\text{ V DC}$).
+* **Internal Bubble Lines**:
+  * *No line inside circle*: Field-mounted instrument (located on pipe or vessel in plant).
+  * *Solid horizontal line inside circle*: Board-mounted in main central control room (accessible to operator).
+  * *Dashed horizontal line*: Mounted behind control panel (inaccessible to operator).
+  * *Square enclosing circle*: Distributed Control System (DCS) / shared display software tag.
 
 ---
 
-## 3. Advanced Control Architectures
+### 1.3 Control Valve Actuators & Failure Positions (Figure 5.2)
+Control valves are driven by pneumatic diaphragm actuators opposing a heavy coil spring:
 
-### 3.1 Cascade Control
-Used when disturbances occur in the manipulated variable line or when the primary process has a large measurement lag.
+![Control Valve Failure Positions](images/fig_5_2.png)
 
-![Cascade Control](images/fig_5_8.png)
-
-* **Architecture**:
-  * **Master (Primary) Controller**: Measures process temperature (slow dynamic response) and calculates required heat input, outputting a **setpoint** to the slave controller.
-  * **Slave (Secondary) Controller**: Measures utility steam flow or jacket temperature (fast dynamic response) and directly modulates the control valve.
-* **Design Rule**: The slave loop must be at least 3 to 5 times faster than the master loop:
-  $$\tau_{slave} \le 0.2 \tau_{master}$$
-
-### 3.2 Ratio Control
-Maintains a precise stoichiometric or stoichiometric-equivalent ratio between two flowing streams ($F_B / F_A = R$).
-
-![Ratio Control](images/fig_5_9.png)
-
-* **Wild Stream ($F_A$)**: Flow is measured but uncontrolled.
-* **Controlled Stream ($F_B$)**: Flow setpoint is calculated as $F_{B,sp} = R \times F_A$ and modulated via control valve.
-* **Applications**: Fuel-to-air ratio in furnaces, reactant feed ratios in reactors, reflux-to-feed ratio in distillation columns.
-
-### 3.3 Distillation Column Control Strategies
-
-![Distillation Column Control Configurations](images/fig_5_10.png)
-
-A distillation column has 5 degrees of freedom (manipulated variables: $D, B, L, V, Q_C$). Control schemes fall into two major philosophies:
-1. **Material Balance Control**: Product draw rate ($D$ or $B$) is manipulated to control product composition, while reflux $L$ controls drum level.
-2. **Energy Balance Control**: Reflux flow ($L$) and reboiler duty ($V$) are manipulated to control top and bottom compositions, while product rates ($D$ and $B$) maintain liquid levels in the drum and sump.
+* **Fail Closed (FC / Air-to-Open)**:
+  * Air pressure drives the diaphragm downward to open the valve; spring pushes the valve shut upon loss of instrument air.
+  * *Safety Duty*: Reactor reactant feed lines, fuel gas lines to fired heaters, high-pressure steam supply.
+* **Fail Open (FO / Air-to-Close)**:
+  * Air pressure drives the valve shut; spring forces valve wide open upon air failure.
+  * *Safety Duty*: Reactor cooling water lines, relief depressurizing vents, column bottoms drain lines to prevent vessel flooding.
+* **Fail Locked (FL / Fail in Place)**:
+  * Pneumatic lockup valve holds the current stem position on air loss (used on critical distillation reflux or compressor anti-surge lines).
 
 ---
 
-## 4. Control Valve Sizing & Selection
+## 2. Advanced Process Control Loop Architectures
 
-The control valve is the physical final control element that throttles fluid pressure to regulate flow.
+### 2.1 Basic Single-Input Single-Output (SISO) Feedback Control (Figure 5.4)
+The classic feedback loop: a sensor measures the controlled variable ($CV$), compares it with the setpoint ($SP$) to generate an error $e(t) = SP - CV$, and a PID algorithm adjusts the manipulated variable ($MV$).
 
-### 4.1 Valve Sizing Equation (Flow Coefficient $C_v$)
-For turbulent liquid flow:
-$$Q = C_v \sqrt{\frac{\Delta P_{valve}}{SG}}$$
-where $Q$ is volumetric flow in US gpm, $\Delta P_{valve}$ is pressure drop in psi, and $SG$ is specific gravity relative to water at $60^\circ\text{F}$. (In metric units: $K_v = 0.865 C_v$, with $Q$ in $m^3/h$ and $\Delta P$ in bar).
+![Basic Feedback Loops](images/fig_5_4.png)
 
-### 4.2 Inherent vs. Installed Characteristics
+* **Flow Control**: Fast process response ($< 2\text{ seconds}$). Usually PI control (derivative action omitted due to flow turbulence noise).
+* **Level Control**: Integrating process. P-only or PI with loose tuning ("averaging level control") to absorb flow surges without upsetting downstream units.
+* **Pressure Control**: Fast to moderate response. Vapor space pressure manipulated via overhead vent, condenser coolant flow, or fuel throttling.
+* **Temperature Control**: Slow process response with substantial thermal dead time and lag. Full PID control required.
+
+---
+
+### 2.2 Cascade Control (Figures 5.5 and 5.6)
+Used when a disturbance enters the manipulated stream before affecting the primary process variable. A primary (master) controller adjusts the setpoint of a secondary (slave) controller:
+
+![Cascade Control of Exchanger](images/fig_5_5.png)
+
+![Cascade Control of Distillation Tray](images/fig_5_6.png)
+
+* **Operating Principle**:
+  * *Slave loop (inner)*: Must be fast (e.g. flow control valve `FC`). It immediately measures and rejects supply header pressure fluctuations before they alter the heat transfer rate.
+  * *Master loop (outer)*: Slower primary process variable (e.g. process outlet temperature `TC` or column tray temperature). Its output acts as the setpoint to the slave controller: $SP_{FC} = MV_{TC}$.
+
+---
+
+### 2.3 Ratio Control (Figure 5.7)
+Maintains a fixed stoichiometric or operational ratio between two flowing streams ($R = F_2 / F_1$):
+
+![Ratio Control](images/fig_5_7.png)
+
+* **Application**: Reactant feeds to a chemical reactor (e.g. hydrogen to benzene ratio); combustion air-to-fuel ratio in fired heaters; blending operations.
+* **Architecture**: The uncontrolled "wild" stream flow $F_1$ is measured, multiplied by the desired ratio factor $K$, and passed as the setpoint to the controlled stream flow loop: $SP_{F2} = K \cdot F_1$.
+
+---
+
+### 2.4 Override & High/Low Selector Control (Figure 5.8)
+Protects equipment from exceeding safe operating limits during normal control:
+
+![Override Control](images/fig_5_8.png)
+
+* Two or more controllers feed a High-Selector (`HS`) or Low-Selector (`LS`) module, which passes only the most constraining signal to the control valve.
+* *Example*: Gas compressor discharge pressure controller normally throttles the discharge valve; if compressor motor amps exceed maximum rating, a current controller overrides the pressure loop to throttle the valve and prevent motor burnout.
+
+---
+
+### 2.5 Split-Range Control (Figure 5.9)
+A single controller output ($0\% - 100\%$) operates two or more control valves across different signal ranges:
+
+![Split-Range Control](images/fig_5_9.png)
+
+* **Reactor Thermal Control**:
+  * $0\% - 50\%$ controller output: Opens cooling water valve from $100\%$ to $0\%$.
+  * $50\%$: Both valves fully closed (deadband).
+  * $50\% - 100\%$ controller output: Opens steam heating valve from $0\%$ to $100\%$.
+* **Vessel Pressure Blanket Control**:
+  * Low pressure ($0\% - 50\%$): Opens nitrogen pad gas supply valve.
+  * High pressure ($50\% - 100\%$): Opens flare / vent valve.
+
+---
+
+### 2.6 Feedforward Plus Feedback Control (Figure 5.10)
+Measures measurable external disturbances upstream (e.g. sudden feed flow or feed temperature changes) and makes predictive corrections to the manipulated variable before the error appears at the process outlet:
+
+![Feedforward Control](images/fig_5_10.png)
+
+---
+
+## 3. Control Valve Inherent Flow Characteristics
+
+The flow characteristic describes the relationship between valve stem travel ($h$, $0$ to $100\%$) and the volumetric flow capacity ($C_v$):
 
 ![Control Valve Characteristics](images/fig_5_11.png)
 
-![Installed vs Inherent Characteristics](images/fig_5_12.png)
+1. **Linear Characteristic**:
+   $$\frac{d Q}{d h} = \text{constant} \implies Q = Q_{max} \cdot h$$
+   Flow is directly proportional to stem position.
+   * *Best suited for*: Liquid level control where system pressure drop is concentrated entirely across the control valve ($\Delta P_{valve} / \Delta P_{system} > 0.6$).
+2. **Equal Percentage (Logarithmic) Characteristic**:
+   $$\frac{d Q}{d h} = k Q \implies Q = Q_{max} \cdot R^{h - 1}$$
+   Equal increments of stem travel produce equal percentage increases in flow rate (where $R$ is rangeability, typically $30 - 50$).
+   * *Best suited for*: Pressure control, heat exchangers, and systems where pipeline frictional pressure drop is large compared to valve pressure drop ($\Delta P_{valve} / \Delta P_{system} < 0.33$). As flow increases and line losses steal pressure drop from the valve, the equal percentage curve linearizes into an effective linear installed characteristic.
+3. **Quick Opening Characteristic**:
+   Provides maximum flow with small initial stem travel.
+   * *Best suited for*: On/off safety relief valves, batch dumping, emergency isolation.
 
-* **Inherent Characteristics** (constant $\Delta P$ across valve):
-  1. **Linear**: Flow is directly proportional to stem lift: $m = x$. Used for liquid level control and systems where valve $\Delta P$ is a large, constant fraction of system $\Delta P$.
-  2. **Equal Percentage**: Equal increments of stem travel produce equal percentage changes in flow:
-     $$\frac{dm}{dx} = \alpha m \implies m = R^{x - 1}$$
-     where $R$ is rangeability (typically 20 to 50).
-  3. **Quick Opening**: Rapid flow increase at low travel. Used for emergency isolation and safety bypass.
-* **Installed Characteristics (Valve Authority $P_r$)**:
-  In a real pipeline, as the valve opens, flow increases, causing pipeline frictional pressure drop to increase as $v^2$. Consequently, $\Delta P_{valve}$ decreases.
-  * **Valve Authority**:
-    $$P_r = \frac{\Delta P_{valve,wide\_open}}{\Delta P_{system,total}}$$
-  * **Golden Design Rule**: An **Equal Percentage** valve in a system with $P_r \approx 0.25 - 0.50$ shifts its installed characteristic to near-linear, providing stable loop gain across the entire operating range.
-  * Sizing rule: At normal flow, the valve should be $50 - 70\%$ open; at maximum design flow, no more than $85 - 90\%$ open.
+---
 
-### 4.3 Three-Way Control Valves
+## 4. Master Unit Operation Control Schemes
 
-![Three-Way Valves](images/fig_5_13.png)
+### 4.1 Distillation Column Complete Control Scheme (Figure 5.12)
+A continuous binary distillation column possesses 5 degrees of freedom requiring 5 independent control loops:
 
-* **Mixing Valve**: Two inlet streams combine into a single outlet.
-* **Diverting Valve**: A single inlet stream is divided into two outlet streams (e.g. process heat exchanger bypass).
+![Distillation Column Control Scheme](images/fig_5_12.png)
+
+1. **Column Pressure**: Controlled by manipulating overhead condenser cooling water flow, vapor vent, or refrigerant pressure.
+2. **Reflux Drum Liquid Level**: Controlled by manipulating distillate product draw ($D$).
+3. **Column Sump (Bottoms) Liquid Level**: Controlled by manipulating bottoms product draw ($B$).
+4. **Top Composition / Temperature**: Controlled by manipulating reflux flow rate ($L$) cascaded to a sensitive tray temperature near the column top.
+5. **Bottom Composition / Temperature**: Controlled by manipulating reboiler steam flow rate ($V$) cascaded to a sensitive stripping tray temperature.
+
+---
+
+### 4.2 Exothermic Chemical Reactor Complete Control Scheme (Figure 5.13)
+Maintains stable temperature and conversion while eliminating thermal runaway hazards:
+
+![Reactor Control Scheme](images/fig_5_13.png)
+
+1. **Temperature Cascade**: Primary reactor core temperature controller (`TC`) sets the setpoint of the jacket coolant flow or coolant temperature loop (`FC` or `TC_jacket`).
+2. **Feed Ratio Control**: Reactants A and B are metered through a ratio controller to ensure exact stoichiometric consumption.
+3. **Emergency Interlock**: High-High temperature alarm (`TAHH`) triggers an automatic safety interlock: trips feed pumps, opens emergency quench, and vents reactor contents to blowout tank.
+
+---
+
+## 5. Visualcheme Implementation Architecture
+
+1. **State Variables**: Model control loops with Setpoint ($SP$), Process Variable ($CV$), Manipulated Output ($MV$, $0\% - 100\%$), Controller Mode (Auto/Manual), and PID tuning parameters ($K_c, \tau_I, \tau_D$).
+2. **Interactive Visualization Gradients**:
+   * *Control Loop Error Widget*: Visual LED gradient showing tracking error $|SP - CV|$.
+   * *Valve Stroke Visualizer*: Animate valve stem travel ($0 - 100\%$) and dynamically recalculate valve $\Delta P$ and cavitation index.
+   * *Safety Alarm HUD*: Display flashing high/low alarm annunciators (`LAH`, `PAHH`, `TAL`) when state variables breach operating envelopes.
+3. **Preset Scenarios**:
+   * *Distillation Column Energy Balance Control*: Dual composition cascade loops.
+   * *Batch CSTR Thermal Runaway Prevention*: Split-range jacket cooling/heating with emergency quench trigger.
