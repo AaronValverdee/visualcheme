@@ -19,7 +19,14 @@ export interface ParameterDefinition {
   step?: number;
   options?: ParameterOption[];
   description?: string;
-  category?: 'Geometry' | 'Inlet Conditions' | 'Fluid / Substance' | 'Operations & Valves' | 'Model Options';
+  category?:
+    | 'Geometry'
+    | 'Inlet Conditions'
+    | 'Fluid / Substance'
+    | 'Operations & Valves'
+    | 'Fittings (accidentes)'
+    | 'Centrifugal Pump'
+    | 'Model Options';
 }
 
 /**
@@ -43,6 +50,7 @@ export interface DiagramPoint {
   x: number;
   y: number;
   label?: string;
+  color?: string;
 }
 
 export interface DiagramCurve {
@@ -62,6 +70,10 @@ export interface DiagramData {
   yScale: 'linear' | 'log';
   curves: DiagramCurve[];
   operatingPoint?: DiagramPoint;
+  /** Extra markers, drawn without the glowing duty halo. */
+  markers?: DiagramPoint[];
+  /** Linear pump charts carry a legend; the Moody chart does not. */
+  showLegend?: boolean;
   xDomain?: [number, number];
   yDomain?: [number, number];
 }

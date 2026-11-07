@@ -20,7 +20,7 @@ export class PropertyBar {
   public render(availableProperties: PropertyMetadata[]): void {
     this.container.innerHTML = `
       <div class="property-bar-label">
-        <span>Active Heatmap Gradient</span>
+        <span>Plotted variable</span>
       </div>
       <div class="property-pill-group" id="property-pill-group"></div>
     `;

@@ -26,18 +26,13 @@ export class FluidStateBar {
     const Le: number | undefined = extra.entranceLength;
     const n: number | undefined = extra.powerLawN;
 
-    const regimeColor =
-      regime === 'turbulent'
-        ? 'var(--accent-sky)'
-        : regime === 'transition'
-        ? 'var(--accent-amber)'
-        : 'var(--accent-emerald)';
-
-    const profileText = regime === 'laminar' ? 'parabolic' : `1/${(n ?? 7).toFixed(1)} power law`;
+    const noFlow = Boolean(extra.noFlow);
+    const regimeClass = noFlow ? 'regime-none' : `regime-${regime}`;
+    const profileText = noFlow ? 'stagnant' : regime === 'laminar' ? 'parabolic' : `1/${(n ?? 7).toFixed(1)} power law`;
 
     this.container.innerHTML = `
       <div class="fluid-state-header">
-        <span class="fluid-state-title">Bulk & Transport Properties</span>
+        <span class="fluid-state-title">Bulk and transport properties</span>
         <span class="fluid-state-sub">(inlet → outlet when they differ)</span>
       </div>
       <div class="fluid-state-items">
@@ -50,8 +45,8 @@ export class FluidStateBar {
           <span class="badge-label">Reynolds</span>
           <span class="badge-symbol">Re</span>
           <span class="badge-val">${this.inletOutlet(result, 'reynolds', (v) => Math.round(v).toLocaleString('en-US'))}</span>
-          <span class="regime-tag" style="background:${regimeColor}22;color:${regimeColor};border:1px solid ${regimeColor}55;">
-            ${regime.toUpperCase()}
+          <span class="regime-tag ${regimeClass}">
+            ${noFlow ? 'NO FLOW' : regime.toUpperCase()}
           </span>
         </div>
         <div class="fluid-state-badge" title="Darcy-Weisbach friction factor">
@@ -72,7 +67,7 @@ export class FluidStateBar {
         <div class="fluid-state-badge" title="Hydrodynamic entrance length: 0.05·Re·D (laminar), 4.4·Re^(1/6)·D (turbulent). Velocity profile shape shown on the canvas.">
           <span class="badge-label">Entrance</span>
           <span class="badge-symbol">L_e</span>
-          <span class="badge-val">${Le !== undefined ? `${Le.toFixed(2)} m, ${profileText}` : '—'}</span>
+          <span class="badge-val">${noFlow ? '—' : Le !== undefined ? `${Le.toFixed(2)} m, ${profileText}` : '—'}</span>
         </div>
       </div>
     `;

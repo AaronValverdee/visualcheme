@@ -55,13 +55,6 @@ describe('Pipe unit: conservation laws and limits', () => {
     expect(relErr(s.dissipation_W, s.mDot_kg_s * G * s.headLoss_m)).toBeLessThan(1e-9);
   });
 
-  it('exergy destruction equals (T0/T) x dissipation', () => {
-    const atDeadState = summary(run({ temp_c: 20, ambient_temp_c: 20, heat_transfer_mode: 'adiabatic' }));
-    expect(relErr(atDeadState.exergyDestroyed_W, atDeadState.dissipation_W)).toBeLessThan(0.002);
-    const hot = summary(run({ temp_c: 90, ambient_temp_c: 20, heat_transfer_mode: 'adiabatic' }));
-    expect(relErr(hot.exergyDestroyed_W / hot.dissipation_W, 293.15 / 363.15)).toBeLessThan(0.002);
-  });
-
   it('bare hot pipe cools exponentially toward ambient (NTU = U pi D L / m cp)', () => {
     const r = run({ velocity: 0.05, diameter_mm: 10, length_m: 100, temp_c: 80, ambient_temp_c: 20, heat_transfer_mode: 'uninsulated' });
     const s = summary(r);

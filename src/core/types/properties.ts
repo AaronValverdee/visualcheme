@@ -4,8 +4,9 @@ export type PropertyKey =
   | 'temperature'
   | 'reynolds'
   | 'friction_factor'
-  | 'exergy_loss'
   | 'head_loss'
+  | 'hydraulic_grade'
+  | 'energy_grade'
   | 'density'
   | 'viscosity';
 
@@ -81,27 +82,38 @@ export const PROPERTY_REGISTRY: Record<PropertyKey, PropertyMetadata> = {
     defaultRange: [0.01, 0.08],
     minSpan: 1e-4
   },
-  exergy_loss: {
-    key: 'exergy_loss',
-    label: 'Exergy Destruction',
-    symbol: 'dĖx/dx',
-    unit: 'W/m',
-    description: 'Local Second-Law exergy destruction T₀·Ṡgen from viscous dissipation (valve spike spread over one grid cell)',
-    colorScheme: 'inferno',
-    format: (val) => `${val.toFixed(2)} W/m`,
-    defaultRange: [0.01, 100.0],
-    minSpan: 0.1
-  },
   head_loss: {
     key: 'head_loss',
     label: 'Head Loss',
     symbol: 'h_L',
     unit: 'm',
-    description: 'Cumulative irreversible (friction + minor) head loss in meters of fluid; excludes elevation',
+    description: 'Cumulative irreversible head loss from pipe friction, fittings, and the valve. Excludes elevation and the pump head.',
     colorScheme: 'viridis',
     format: (val) => `${val.toFixed(3)} m`,
     defaultRange: [0.01, 20.0],
     minSpan: 0.1
+  },
+  hydraulic_grade: {
+    key: 'hydraulic_grade',
+    label: 'Hydraulic Grade',
+    symbol: 'HGL',
+    unit: 'm',
+    description: 'Hydraulic grade line z + P/(ρg). Drops at fittings and the valve, jumps by the pump head.',
+    colorScheme: 'coolwarm',
+    format: (val) => `${val.toFixed(2)} m`,
+    defaultRange: [0, 40],
+    minSpan: 0.5
+  },
+  energy_grade: {
+    key: 'energy_grade',
+    label: 'Energy Grade',
+    symbol: 'EGL',
+    unit: 'm',
+    description: 'Energy grade line: hydraulic grade plus the velocity head v²/(2g).',
+    colorScheme: 'viridis',
+    format: (val) => `${val.toFixed(2)} m`,
+    defaultRange: [0, 40],
+    minSpan: 0.5
   },
   density: {
     key: 'density',

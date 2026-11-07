@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/index.css" />
@@ -22,7 +22,7 @@
         </div>
 
         <nav class="unit-nav" id="unit-nav-tabs">
-          <button class="unit-tab active" data-unit="pipe_flow">Conduit & Pipe Flow</button>
+          <button class="unit-tab active" data-unit="pipe_flow">Pipe Flow</button>
         </nav>
 
         <div class="header-actions">
@@ -35,6 +35,10 @@
             <option value="pipe_towler_20_1">Towler Example 20.1 (25 mm, 120 m)</option>
             <option value="pipe_uphill">Uphill Line: Pressure Drop ≠ Head Loss</option>
             <option value="pipe_flashing">Hot Acetone Throttled: Flashing</option>
+            <option value="pipe_fittings">Fittings: elbows, tees, entrance and exit</option>
+            <option value="pipe_pump_duty">Centrifugal pump operating point</option>
+            <option value="pipe_npsh">Suction line with a thin NPSH margin</option>
+            <option value="pipe_dead_head">Pump cannot meet the static head</option>
           </select>
           <button id="btn-reset" class="btn-icon" title="Reset to Defaults">↺ Reset</button>
         </div>
@@ -48,8 +52,7 @@
         <!-- Left Column: Interactive Equipment Controls & Sliders -->
         <aside class="hud-card left-panel">
           <div class="card-title">
-            <span>Equipment Controls</span>
-            <span style="font-size:0.7rem;color:var(--accent-sky);text-transform:none;">Sub-1ms Reactivity</span>
+            <span>Equipment controls</span>
           </div>
           <div class="controls-container" id="controls-container"></div>
         </aside>
@@ -77,11 +80,11 @@
         <!-- Right Column: Synchronized Diagnostic Engineering Charts -->
         <aside class="hud-card right-panel">
           <div class="card-title">
-            <span>Diagnostic Charts</span>
-            <span style="font-size:0.7rem;color:var(--text-muted);text-transform:none;">Synchronized</span>
+            <span>Figures</span>
           </div>
           <div class="charts-container">
             <div class="chart-wrapper" id="spatial-chart-wrapper"></div>
+            <div class="chart-wrapper" id="pump-chart-wrapper" hidden></div>
             <div class="chart-wrapper" id="diagram-chart-wrapper"></div>
           </div>
         </aside>

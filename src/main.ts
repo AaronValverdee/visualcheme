@@ -10,6 +10,7 @@ import { ControlsPanel } from './ui/components/controls_panel';
 import { PipeRenderer } from './ui/renderers/pipe_renderer';
 import { SpatialChart } from './ui/charts/spatial_chart';
 import { DiagramChart } from './ui/charts/diagram_chart';
+import { DiagramData } from './core/types/unit';
 
 class VisualchemeApp {
   private currentUnit: UnitOperation;
@@ -25,6 +26,7 @@ class VisualchemeApp {
   private pipeRenderer: PipeRenderer | null = null;
   private spatialChart: SpatialChart;
   private diagramChart: DiagramChart;
+  private pumpChart: DiagramChart;
 
   constructor() {
     // 1. Initial unit: Pipe Flow
@@ -48,6 +50,7 @@ class VisualchemeApp {
 
     this.spatialChart = new SpatialChart('spatial-chart-wrapper');
     this.diagramChart = new DiagramChart('diagram-chart-wrapper');
+    this.pumpChart = new DiagramChart('pump-chart-wrapper');
 
     // 3. Setup Navigation & Presets
     this.setupNavigation();
@@ -118,6 +121,45 @@ class VisualchemeApp {
         params: {
           fluid: 'Acetone', velocity: 3.0, diameter_mm: 50, length_m: 20, temp_c: 50, p_inlet_kpa: 200,
           valve_type: 'globe_valve', valve_opening_pct: 40
+        }
+      },
+      pipe_fittings: {
+        unit: 'pipe_flow',
+        params: {
+          fluid: 'Water', velocity: 2.2, diameter_mm: 80, length_m: 60, material: 'commercial_steel',
+          temp_c: 20, p_inlet_kpa: 400, valve_opening_pct: 100, heat_transfer_mode: 'adiabatic',
+          entrance: 'sharp', exit: 'sudden', n_elbow_90: 6, n_elbow_90_long: 2,
+          n_elbow_square: 1, n_tee_branch: 2
+        }
+      },
+      pipe_pump_duty: {
+        unit: 'pipe_flow',
+        params: {
+          fluid: 'Water', pump_enabled: true, drive_mode: 'operating_point',
+          diameter_mm: 50, length_m: 120, elevation_m: 18, material: 'commercial_steel',
+          temp_c: 25, p_inlet_kpa: 180, p_delivery_kpa: 320, heat_transfer_mode: 'adiabatic',
+          valve_type: 'gate_valve', valve_opening_pct: 100, entrance: 'sharp', exit: 'sudden',
+          n_elbow_90: 8, n_elbow_45: 2, n_tee_branch: 1, pump_position_pct: 12,
+          h_shutoff_m: 55, q_max_m3h: 30, q_bep_m3h: 16, eta_bep: 0.72, npshr_m: 2.5
+        }
+      },
+      pipe_npsh: {
+        unit: 'pipe_flow',
+        params: {
+          fluid: 'Water', pump_enabled: true, drive_mode: 'imposed', velocity: 1.2,
+          diameter_mm: 50, length_m: 80, elevation_m: 12, pump_position_pct: 50,
+          temp_c: 70, p_inlet_kpa: 120, heat_transfer_mode: 'adiabatic',
+          entrance: 'sharp', n_elbow_90: 4, npshr_m: 4, q_bep_m3h: 8, q_max_m3h: 25,
+          h_shutoff_m: 40, valve_opening_pct: 100
+        }
+      },
+      pipe_dead_head: {
+        unit: 'pipe_flow',
+        params: {
+          fluid: 'Water', pump_enabled: true, drive_mode: 'operating_point',
+          diameter_mm: 50, length_m: 40, elevation_m: 25, temp_c: 25,
+          p_inlet_kpa: 400, p_delivery_kpa: 550, h_shutoff_m: 12, q_max_m3h: 20,
+          heat_transfer_mode: 'adiabatic'
         }
       }
     };
@@ -196,9 +238,11 @@ class VisualchemeApp {
 
     const regimeOverlay = document.getElementById('overlay-regime');
     if (regimeOverlay) {
-      regimeOverlay.textContent = result.extraData?.regime
-        ? String(result.extraData.regime).toUpperCase()
-        : 'STEADY STATE';
+      regimeOverlay.textContent = result.extraData?.noFlow
+        ? 'no flow'
+        : result.extraData?.regime
+          ? String(result.extraData.regime)
+          : 'steady';
     }
 
     // 4. Update Canvas
@@ -209,6 +253,17 @@ class VisualchemeApp {
     // 5. Update Synchronized Charts
     this.spatialChart.render(result, this.activeProperty);
     this.diagramChart.render(result.diagram);
+
+    const pumpDiagram = result.extraData?.pumpDiagram as DiagramData | undefined;
+    const pumpWrap = document.getElementById('pump-chart-wrapper');
+    if (pumpWrap) {
+      if (pumpDiagram) {
+        pumpWrap.hidden = false;
+        this.pumpChart.render(pumpDiagram);
+      } else {
+        pumpWrap.hidden = true;
+      }
+    }
   }
 }
 

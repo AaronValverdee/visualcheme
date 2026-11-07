@@ -41,6 +41,7 @@ export class ControlsPanel {
         const labelSpan = document.createElement('span');
         labelSpan.textContent = p.label;
         labelRow.appendChild(labelSpan);
+        if (p.description) group.title = p.description;
 
         if (p.type === 'number') {
           const badge = document.createElement('span');
@@ -87,6 +88,27 @@ export class ControlsPanel {
           });
 
           group.appendChild(select);
+        } else if (p.type === 'boolean') {
+          const badge = document.createElement('span');
+          badge.className = 'control-value-badge';
+          badge.id = `badge-${p.id}`;
+          const on = Boolean(this.currentParams[p.id]);
+          badge.textContent = on ? 'On' : 'Off';
+          labelRow.appendChild(badge);
+
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.className = 'control-check';
+          input.setAttribute('aria-label', p.label);
+          input.checked = on;
+          labelRow.appendChild(input);
+          group.appendChild(labelRow);
+
+          input.addEventListener('change', () => {
+            this.currentParams[p.id] = input.checked;
+            badge.textContent = input.checked ? 'On' : 'Off';
+            this.onChangeCallback(this.currentParams);
+          });
         }
 
         this.container.appendChild(group);
