@@ -11,7 +11,7 @@
 
 **Visualcheme** is an open-source, web-first, real-time chemical engineering simulation and visualization platform. 
 
-Unlike traditional process simulators (e.g., Aspen Plus, HYSYS, DWSIM, PRO/II) that operate as **point-state black boxes**—where users input stream specifications, press *Run*, and inspect static numerical tables—Visualcheme focuses on **spatial continuity, fluid dynamics, and thermodynamic transitions inside the equipment itself**:
+Unlike traditional process simulators (e.g., Aspen Plus, HYSYS) that operate as **point-state black boxes**—where users input stream specifications, press *Run*, and inspect static numerical tables—Visualcheme focuses on **spatial continuity, fluid dynamics, and thermodynamic transitions inside the equipment itself**:
 
 * **Live 2D/3D Internal Physics**: Equipment models display dynamic velocity profiles, boundary layers, thermal gradients, phase changes, and turbulent dissipation.
 * **User-Selected Spatial Heatmaps**: The user dynamically selects which physical property drives the internal color gradient and 1D profile of the unit (Pressure $P$, Temperature $T$, head loss $h_L$, or the hydraulic grade line).
