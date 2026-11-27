@@ -1,4 +1,5 @@
 import { SimulationWarning } from '../../core/types/unit';
+import { conceptHref, resolveWarningConceptId } from '../../core/theory/concepts';
 
 const LEVEL_ORDER: Record<SimulationWarning['level'], number> = { alert: 0, warning: 1, info: 2 };
 const LEVEL_LABEL: Record<SimulationWarning['level'], string> = {
@@ -28,8 +29,17 @@ export class WarningsPanel {
       tag.className = 'warning-tag';
       tag.textContent = LEVEL_LABEL[w.level];
       const msg = document.createElement('span');
+      msg.className = 'warning-msg';
       msg.textContent = w.message;
-      row.append(tag, msg);
+
+      const conceptId = resolveWarningConceptId(w.message);
+      const theoryLink = document.createElement('a');
+      theoryLink.className = 'warning-theory-link theory-link';
+      theoryLink.href = conceptHref(conceptId);
+      theoryLink.dataset.theoryConcept = conceptId;
+      theoryLink.textContent = 'Theory §';
+
+      row.append(tag, msg, theoryLink);
       this.container.appendChild(row);
     }
   }

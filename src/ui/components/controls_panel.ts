@@ -1,4 +1,5 @@
 import { ParameterDefinition } from '../../core/types/unit';
+import { conceptHref } from '../../core/theory/concepts';
 
 export class ControlsPanel {
   private container: HTMLElement;
@@ -28,7 +29,12 @@ export class ControlsPanel {
     for (const [catName, params] of Object.entries(categories)) {
       const catHeader = document.createElement('div');
       catHeader.className = 'control-category-header';
-      catHeader.textContent = catName;
+      const catLink = document.createElement('a');
+      catLink.className = 'theory-link theory-link-subtle';
+      catLink.href = conceptHref(`cat:${catName}`);
+      catLink.dataset.theoryConcept = `cat:${catName}`;
+      catLink.textContent = catName;
+      catHeader.appendChild(catLink);
       this.container.appendChild(catHeader);
 
       for (const p of params) {
@@ -38,10 +44,12 @@ export class ControlsPanel {
         const labelRow = document.createElement('div');
         labelRow.className = 'control-label-row';
 
-        const labelSpan = document.createElement('span');
-        labelSpan.textContent = p.label;
-        labelRow.appendChild(labelSpan);
-        if (p.description) group.title = p.description;
+        const labelLink = document.createElement('a');
+        labelLink.className = 'theory-link control-theory-link';
+        labelLink.href = conceptHref(`param:${p.id}`);
+        labelLink.dataset.theoryConcept = `param:${p.id}`;
+        labelLink.textContent = p.label;
+        labelRow.appendChild(labelLink);
 
         if (p.type === 'number') {
           const badge = document.createElement('span');

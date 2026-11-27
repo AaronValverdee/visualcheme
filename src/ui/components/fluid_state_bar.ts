@@ -1,5 +1,6 @@
 import { UnitSimulationResult } from '../../core/types/unit';
 import { PropertyKey } from '../../core/types/properties';
+import { conceptHref } from '../../core/theory/concepts';
 
 export class FluidStateBar {
   private container: HTMLElement;
@@ -36,39 +37,39 @@ export class FluidStateBar {
         <span class="fluid-state-sub">(inlet → outlet when they differ)</span>
       </div>
       <div class="fluid-state-items">
-        <div class="fluid-state-badge" title="Mean velocity v = ṁ/(ρA); changes only through thermal expansion">
+        <a class="fluid-state-badge theory-badge-link" href="${conceptHref('hud:velocity')}" data-theory-concept="hud:velocity">
           <span class="badge-label">Velocity</span>
           <span class="badge-symbol">v</span>
           <span class="badge-val">${this.inletOutlet(result, 'velocity', (v) => `${v.toFixed(2)} m/s`)}</span>
-        </div>
-        <div class="fluid-state-badge" title="Reynolds number Re = ρvD/μ = 4ṁ/(πDμ); follows viscosity along the pipe">
+        </a>
+        <a class="fluid-state-badge theory-badge-link" href="${conceptHref('hud:reynolds')}" data-theory-concept="hud:reynolds">
           <span class="badge-label">Reynolds</span>
           <span class="badge-symbol">Re</span>
           <span class="badge-val">${this.inletOutlet(result, 'reynolds', (v) => Math.round(v).toLocaleString('en-US'))}</span>
           <span class="regime-tag ${regimeClass}">
             ${noFlow ? 'NO FLOW' : regime.toUpperCase()}
           </span>
-        </div>
-        <div class="fluid-state-badge" title="Darcy-Weisbach friction factor">
+        </a>
+        <a class="fluid-state-badge theory-badge-link" href="${conceptHref('hud:friction_factor')}" data-theory-concept="hud:friction_factor">
           <span class="badge-label">Friction</span>
           <span class="badge-symbol">f</span>
           <span class="badge-val">${this.inletOutlet(result, 'friction_factor', (v) => v.toFixed(4))}</span>
-        </div>
-        <div class="fluid-state-badge" title="Liquid density from the DIPPR 105/106 correlation">
+        </a>
+        <a class="fluid-state-badge theory-badge-link" href="${conceptHref('hud:density')}" data-theory-concept="hud:density">
           <span class="badge-label">Density</span>
           <span class="badge-symbol">ρ</span>
           <span class="badge-val">${this.inletOutlet(result, 'density', (v) => `${v.toFixed(1)} kg/m³`)}</span>
-        </div>
-        <div class="fluid-state-badge" title="Dynamic viscosity from the DIPPR 101 correlation">
+        </a>
+        <a class="fluid-state-badge theory-badge-link" href="${conceptHref('hud:viscosity')}" data-theory-concept="hud:viscosity">
           <span class="badge-label">Viscosity</span>
           <span class="badge-symbol">μ</span>
           <span class="badge-val">${this.inletOutlet(result, 'viscosity', (v) => `${v.toFixed(3)} cP`)}</span>
-        </div>
-        <div class="fluid-state-badge" title="Hydrodynamic entrance length: 0.05·Re·D (laminar), 4.4·Re^(1/6)·D (turbulent). Velocity profile shape shown on the canvas.">
+        </a>
+        <a class="fluid-state-badge theory-badge-link" href="${conceptHref('hud:entrance_length')}" data-theory-concept="hud:entrance_length">
           <span class="badge-label">Entrance</span>
           <span class="badge-symbol">L_e</span>
           <span class="badge-val">${noFlow ? '—' : Le !== undefined ? `${Le.toFixed(2)} m, ${profileText}` : '—'}</span>
-        </div>
+        </a>
       </div>
     `;
   }

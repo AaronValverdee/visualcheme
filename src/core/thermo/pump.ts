@@ -87,7 +87,7 @@ export function npshRequired(curve: PumpCurve, Q: number): number {
 }
 
 /**
- * Towler eq. 20.15: NPSHa = (P1 − Pv)/(ρg) + z1 − h_fs.
+ * Towler & Sinnott (2nd ed.) eq. 20.21 (p. 1237): NPSHa = (P1 − Pv)/(ρg) + z1 − h_fs.
  * z1 is the liquid surface elevation above the pump centerline.
  */
 export function npshAvailable(p1: number, pVapor: number, rho: number, z1: number, hFs: number): number {
@@ -110,7 +110,7 @@ export function lineHead(model: LossModel, Q: number): HeadParts {
 }
 
 /**
- * h_fs for Towler eq. 20.15, net of the velocity head the liquid already carries
+ * h_fs for Towler & Sinnott eq. 20.21, net of the velocity head the liquid already carries
  * when the suction end is a flowing pipe rather than a still vessel.
  */
 export function suctionLoss(model: LossModel, Q: number): number {

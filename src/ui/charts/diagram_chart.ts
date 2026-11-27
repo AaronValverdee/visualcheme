@@ -1,4 +1,5 @@
 import { DiagramData, DiagramPoint } from '../../core/types/unit';
+import { conceptHref } from '../../core/theory/concepts';
 
 function esc(value: string): string {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -24,11 +25,15 @@ function formatTick(v: number): string {
 
 export class DiagramChart {
   private container: HTMLElement;
+  private theoryConceptId?: string;
+  private theoryLinkLabel?: string;
 
-  constructor(containerId: string) {
+  constructor(containerId: string, theoryMeta?: { conceptId: string; label: string }) {
     const el = document.getElementById(containerId);
     if (!el) throw new Error(`Element #${containerId} not found`);
     this.container = el;
+    this.theoryConceptId = theoryMeta?.conceptId;
+    this.theoryLinkLabel = theoryMeta?.label;
   }
 
   public render(data: DiagramData): void {
@@ -168,6 +173,11 @@ export class DiagramChart {
       ? `<text transform="translate(14 ${padT + chartH / 2}) rotate(-90)" fill="#8a8474" font-size="11" font-family="IBM Plex Sans, sans-serif" text-anchor="middle">${esc(data.yLabel)}</text>`
       : '';
 
+    const theoryLinkHtml =
+      this.theoryConceptId && this.theoryLinkLabel
+        ? `<a class="chart-theory-link theory-link" href="${conceptHref(this.theoryConceptId)}" data-theory-concept="${esc(this.theoryConceptId)}">${esc(this.theoryLinkLabel)}</a>`
+        : '';
+
     this.container.innerHTML = `
       <svg viewBox="0 0 ${w} ${h}">
         <rect x="${padL}" y="${padT}" width="${chartW}" height="${chartH}" fill="none" stroke="rgba(232,226,208,0.22)"/>
@@ -176,9 +186,10 @@ export class DiagramChart {
         ${legendSvg}
         ${opSvg}
         ${yTitle}
-        <text x="${padL}" y="${padT - 8}" fill="#e8e2d0" font-size="15" font-family="Source Serif 4, Palatino, serif" font-style="italic">${esc(data.title)}</text>
+        <text x="${padL}" y="${padT - 8}" fill="#e8e2d0" font-size="13.5" font-family="Source Serif 4, Palatino, serif" font-style="italic">${esc(data.title)}</text>
         <text x="${padL + chartW}" y="${padT + chartH + (isLogX ? 28 : 30)}" fill="#8a8474" font-size="11" font-family="IBM Plex Sans, sans-serif" text-anchor="end">${esc(data.xLabel)}</text>
       </svg>
+      ${theoryLinkHtml}
     `;
   }
 }

@@ -288,7 +288,7 @@ export class PipeUnit implements UnitOperation {
           { value: 'globe_valve', label: 'Globe Valve, Plug Disk (K = 9 open)' },
           { value: 'ball_valve', label: 'Ball / Plug Cock (K = 0.05 open)' }
         ],
-        description: 'Valve geometry resistance characteristic (Towler Table 20.4)'
+        description: 'Valve geometry resistance characteristic (gate & globe: Towler Table 20.4; ball: Weisbach plug-cock data)'
       },
       {
         id: 'pump_enabled',
@@ -985,7 +985,7 @@ export class PipeUnit implements UnitOperation {
     if (w.vIn > 3) {
       notes.push({
         level: 'warning',
-        message: `Velocity ${w.vIn.toFixed(2)} m/s is above the liquid discharge band of 1.5–3 m/s and the suction band of 0.5–1.5 m/s (Towler Table 20.1).`
+        message: `Velocity ${w.vIn.toFixed(2)} m/s is above the liquid discharge band of 1.5–3 m/s and the suction band of 0.5–1.5 m/s (Towler Section 20.10).`
       });
     } else if (w.vIn > 1.5) {
       notes.push({
@@ -995,7 +995,7 @@ export class PipeUnit implements UnitOperation {
     } else if (w.vIn < 0.5) {
       notes.push({
         level: 'info',
-        message: `Velocity ${w.vIn.toFixed(2)} m/s is below the 0.5–1.5 m/s suction band (Towler Table 20.1).`
+        message: `Velocity ${w.vIn.toFixed(2)} m/s is below the 0.5–1.5 m/s suction band (Towler Section 20.10).`
       });
     }
 

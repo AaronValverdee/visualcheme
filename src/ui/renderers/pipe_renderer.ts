@@ -106,6 +106,7 @@ export class PipeRenderer {
   private lastTime: number | null = null;
   private animFrameId: number | null = null;
   private resizeObserver: ResizeObserver | null = null;
+  private paused = false;
 
   constructor(canvasId: string) {
     const el = document.getElementById(canvasId) as HTMLCanvasElement;
@@ -165,12 +166,35 @@ export class PipeRenderer {
 
   private startAnimation(): void {
     const loop = (now: number) => {
+      if (this.paused) {
+        this.animFrameId = null;
+        return;
+      }
       const dt = this.lastTime === null ? 0 : Math.min(0.05, (now - this.lastTime) / 1000);
       this.lastTime = now;
       this.render(dt);
       this.animFrameId = requestAnimationFrame(loop);
     };
     this.animFrameId = requestAnimationFrame(loop);
+  }
+
+  public setPaused(paused: boolean): void {
+    if (this.paused === paused) return;
+    this.paused = paused;
+    if (paused) {
+      if (this.animFrameId !== null) {
+        cancelAnimationFrame(this.animFrameId);
+        this.animFrameId = null;
+      }
+      this.lastTime = null;
+    } else {
+      this.lastTime = null;
+      this.resize();
+      this.dirty = true;
+      if (this.animFrameId === null) {
+        this.startAnimation();
+      }
+    }
   }
 
   public destroy(): void {

@@ -1,4 +1,5 @@
 import { PropertyKey, PropertyMetadata } from '../../core/types/properties';
+import { conceptHref } from '../../core/theory/concepts';
 
 export class PropertyBar {
   private container: HTMLElement;
@@ -20,7 +21,7 @@ export class PropertyBar {
   public render(availableProperties: PropertyMetadata[]): void {
     this.container.innerHTML = `
       <div class="property-bar-label">
-        <span>Plotted variable</span>
+        <a class="theory-link" href="${conceptHref('pill:header')}" data-theory-concept="pill:header">Plotted variable</a>
       </div>
       <div class="property-pill-group" id="property-pill-group"></div>
     `;
@@ -30,11 +31,12 @@ export class PropertyBar {
       const btn = document.createElement('button');
       btn.className = `property-pill ${prop.key === this.currentProperty ? 'active' : ''}`;
       btn.dataset.key = prop.key;
+      btn.dataset.theoryConcept = `pill:${prop.key}`;
+      btn.setAttribute('aria-label', `${prop.label} (${prop.symbol}): ${prop.description}`);
       btn.innerHTML = `
         <span class="property-pill-symbol">${prop.symbol}</span>
-        <span>${prop.label}</span>
+        <span class="property-pill-name">${prop.label}</span>
       `;
-      btn.title = prop.description;
 
       btn.addEventListener('click', () => {
         if (this.currentProperty === prop.key) return;

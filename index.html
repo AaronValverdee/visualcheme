@@ -17,78 +17,119 @@
       <!-- Top Application Header -->
       <header class="app-header">
         <div class="brand-container">
-          <span class="brand-title">Visualcheme</span>
-          <span class="brand-badge">DECHEMA / DIPPR Core</span>
+          <a href="#/" class="brand-title" id="brand-home">Visualcheme</a>
+          <a
+            href="#/theory/fundamentals/01-thermophysical-properties#1-role-in-the-visualization-page"
+            class="brand-badge theory-link"
+            data-theory-concept="header:dippr-core"
+          >DECHEMA / DIPPR Core</a>
         </div>
 
-        <nav class="unit-nav" id="unit-nav-tabs">
+        <nav class="unit-nav" id="unit-nav-tabs" aria-label="Primary navigation">
           <button class="unit-tab active" data-unit="pipe_flow">Pipe Flow</button>
+          <span class="unit-nav-sep" aria-hidden="true">|</span>
+          <button class="unit-tab" id="tab-theory" data-view="theory">Theory &amp; Equations</button>
         </nav>
 
-        <div class="header-actions">
-          <select id="preset-select" class="preset-select">
-            <option value="">-- Quick Presets --</option>
-            <option value="pipe_default">Turbulent Water (Re ≈ 83,000)</option>
-            <option value="pipe_laminar">Laminar Glycol (Re ≈ 330)</option>
-            <option value="pipe_throttled">Severe Valve Throttling (85% Shut)</option>
-            <option value="pipe_cast_iron">High-Roughness Cast Iron Pipe</option>
-            <option value="pipe_towler_20_1">Towler Example 20.1 (25 mm, 120 m)</option>
-            <option value="pipe_uphill">Uphill Line: Pressure Drop ≠ Head Loss</option>
-            <option value="pipe_flashing">Hot Acetone Throttled: Flashing</option>
-            <option value="pipe_fittings">Fittings: elbows, tees, entrance and exit</option>
-            <option value="pipe_pump_duty">Centrifugal pump operating point</option>
-            <option value="pipe_npsh">Suction line with a thin NPSH margin</option>
-            <option value="pipe_dead_head">Pump cannot meet the static head</option>
-          </select>
+        <div class="header-actions" id="simulator-header-actions">
+          <div class="preset-group">
+            <select id="preset-select" class="preset-select" aria-label="Quick presets">
+              <option value="">-- Quick Presets --</option>
+              <option value="pipe_default">Turbulent Water (Re ≈ 83,000)</option>
+              <option value="pipe_laminar">Laminar Glycol (Re ≈ 330)</option>
+              <option value="pipe_throttled">Severe Valve Throttling (85% Shut)</option>
+              <option value="pipe_cast_iron">High-Roughness Cast Iron Pipe</option>
+              <option value="pipe_towler_20_1">Towler Example 20.1 (25 mm, 120 m)</option>
+              <option value="pipe_uphill">Uphill Line: Pressure Drop ≠ Head Loss</option>
+              <option value="pipe_flashing">Hot Acetone Throttled: Flashing</option>
+              <option value="pipe_fittings">Fittings: elbows, tees, entrance and exit</option>
+              <option value="pipe_pump_duty">Centrifugal pump operating point</option>
+              <option value="pipe_npsh">Suction line with a thin NPSH margin</option>
+              <option value="pipe_dead_head">Pump cannot meet the static head</option>
+            </select>
+            <a
+              href="#/theory/pipe-flow/06-validity-phase-change-and-presets#4-pedagogical-guide-to-all-11-quick-presets-preset-select"
+              class="preset-guide-link theory-link"
+              data-theory-concept="header:presets"
+              aria-label="Guide to all 11 presets"
+            >§</a>
+          </div>
           <button id="btn-reset" class="btn-icon" title="Reset to Defaults">↺ Reset</button>
+        </div>
+
+        <div class="header-actions" id="theory-header-actions" hidden>
+          <a
+            href="#/theory/nomenclature"
+            class="btn-icon theory-header-link"
+            data-theory-slug="nomenclature"
+          >Nomenclature</a>
+          <button id="btn-return-simulator" class="btn-icon">← Simulator</button>
         </div>
       </header>
 
-      <!-- Central User Property Selector (Heatmap Gradient Switcher) -->
-      <section class="property-bar-container" id="property-bar"></section>
+      <!-- Live Unit Operation Simulator View -->
+      <div id="simulator-view" class="simulator-view">
+        <!-- Central User Property Selector (Heatmap Gradient Switcher) -->
+        <section class="property-bar-container" id="property-bar"></section>
 
-      <!-- Main Dashboard Grid -->
-      <main class="dashboard-grid">
-        <!-- Left Column: Interactive Equipment Controls & Sliders -->
-        <aside class="hud-card left-panel">
-          <div class="card-title">
-            <span>Equipment controls</span>
-          </div>
-          <div class="controls-container" id="controls-container"></div>
-        </aside>
-
-        <!-- Center Column: 60 FPS Visual Physics Stage & Real-time Metrics -->
-        <section class="center-stage">
-          <!-- Real-Time KPI HUD Cards -->
-          <div class="metrics-strip" id="metrics-strip"></div>
-
-          <!-- Model Validity Diagnostics -->
-          <div class="warnings-strip" id="warnings-strip" hidden></div>
-
-          <!-- Uniform Bulk Fluid & Transport Properties Bar -->
-          <div class="fluid-state-bar" id="fluid-state-bar"></div>
-
-          <!-- 2D Fluid Simulation Canvas -->
-          <div class="canvas-viewport" id="canvas-container">
-            <canvas id="simulation-canvas"></canvas>
-            <div class="canvas-hud-overlay" id="canvas-hud-overlay">
-              <span id="overlay-unit-title">Conduit Flow</span> | <span id="overlay-regime">TURBULENT</span>
+        <!-- Main Dashboard Grid -->
+        <main class="dashboard-grid">
+          <!-- Left Column: Interactive Equipment Controls & Sliders -->
+          <aside class="hud-card left-panel">
+            <div class="card-title">
+              <span>Equipment controls</span>
+              <span class="card-note">hover for §</span>
             </div>
-          </div>
-        </section>
+            <div class="controls-container" id="controls-container"></div>
+          </aside>
 
-        <!-- Right Column: Synchronized Diagnostic Engineering Charts -->
-        <aside class="hud-card right-panel">
-          <div class="card-title">
-            <span>Figures</span>
-          </div>
-          <div class="charts-container">
-            <div class="chart-wrapper" id="spatial-chart-wrapper"></div>
-            <div class="chart-wrapper" id="pump-chart-wrapper" hidden></div>
-            <div class="chart-wrapper" id="diagram-chart-wrapper"></div>
-          </div>
-        </aside>
-      </main>
+          <!-- Center Column: 60 FPS Visual Physics Stage & Real-time Metrics -->
+          <section class="center-stage">
+            <!-- Real-Time KPI HUD Cards -->
+            <div class="metrics-strip" id="metrics-strip"></div>
+
+            <!-- Model Validity Diagnostics -->
+            <div class="warnings-strip" id="warnings-strip" hidden></div>
+
+            <!-- Uniform Bulk Fluid & Transport Properties Bar -->
+            <div class="fluid-state-bar" id="fluid-state-bar"></div>
+
+            <!-- 2D Fluid Simulation Canvas -->
+            <div class="canvas-viewport" id="canvas-container">
+              <canvas id="simulation-canvas"></canvas>
+              <div class="canvas-hud-overlay" id="canvas-hud-overlay">
+                <a
+                  href="#/theory/pipe-flow/01-flow-regimes-and-velocity-profiles#6-canvas-tracer-particle-physics-piperendererts"
+                  class="canvas-theory-link theory-link"
+                  data-theory-concept="canvas:flow-physics"
+                >
+                  <span id="overlay-unit-title">Conduit Flow</span> | <span id="overlay-regime">TURBULENT</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Right Column: Synchronized Diagnostic Engineering Charts -->
+          <aside class="hud-card right-panel">
+            <div class="card-title">
+              <span>Figures</span>
+              <a
+                class="card-note theory-link"
+                href="#/theory/nomenclature#11-the-friction-factor-triad-factor-of-4-and-factor-of-8"
+                data-theory-concept="header:nomenclature"
+              >Symbols &amp; units §</a>
+            </div>
+            <div class="charts-container">
+              <div class="chart-wrapper" id="spatial-chart-wrapper"></div>
+              <div class="chart-wrapper" id="pump-chart-wrapper" hidden></div>
+              <div class="chart-wrapper" id="diagram-chart-wrapper"></div>
+            </div>
+          </aside>
+        </main>
+      </div>
+
+      <!-- Full-Page Theoretical Foundations & Reference Environment -->
+      <section id="theory-view" class="theory-view" hidden></section>
     </div>
 
     <script type="module" src="/src/main.ts"></script>

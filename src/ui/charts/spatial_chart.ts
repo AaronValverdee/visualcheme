@@ -1,5 +1,6 @@
 import { UnitSimulationResult } from '../../core/types/unit';
 import { PropertyKey, PROPERTY_REGISTRY, displayRange } from '../../core/types/properties';
+import { conceptHref } from '../../core/theory/concepts';
 
 export class SpatialChart {
   private container: HTMLElement;
@@ -97,10 +98,11 @@ export class SpatialChart {
         <!-- Line Profile -->
         <path d="${pathD}" fill="none" stroke="#e4d7a1" stroke-width="1.6" stroke-linecap="round"/>
 
-        <text x="${padL}" y="${padT - 10}" fill="#e8e2d0" font-size="15" font-family="Source Serif 4, Palatino, serif" font-style="italic">
+        <text x="${padL}" y="${padT - 10}" fill="#e8e2d0" font-size="13.5" font-family="Source Serif 4, Palatino, serif" font-style="italic">
           ${meta.label} (${meta.unit}) along the pipe
         </text>
       </svg>
+      <a class="chart-theory-link theory-link" href="${conceptHref('chart:spatial-profile')}" data-theory-concept="chart:spatial-profile">Profile §</a>
     `;
   }
 }
